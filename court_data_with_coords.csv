@@ -1,0 +1,540 @@
+Name,Address,Open_Time,Num,Latitude,Longitude
+Court Park 1,"Florida SouthWestern State College - Charlotte Campus, 26300, Airport Road, Punta Gorda, Charlotte County, Florida, 33951, United States",09:30:00,10,26.9250021,-82.0173922
+Court Park 2,"Holly Grove Boulevard, Orange Tree, Sawgrass Bay, Four Corners, Lake County, Florida, 34714, United States",08:00:00,8,28.3918782,-81.68851
+Court Park 3,"Continental Boulevard, The Villages, Sumter County, Florida, 32163, United States",06:00:00,14,28.8225802,-81.9859956
+Court Park 4,"San Clemente Avenue, Polk County, Florida, 34759, United States",08:30:00,10,28.127933,-81.5027932
+Court Park 5,"I 4, Altamonte Springs, Seminole County, Florida, 32701, United States",08:30:00,16,28.6423807,-81.3886089
+Court Park 6,"Northwest 91st Avenue, Jacaranda, Plantation, Broward County, Florida, 33337, United States",06:30:00,10,26.1278224,-80.2711881
+Court Park 7,"Windermere Pickelball Courts, Windermere Parkway, Forsyth County, Georgia, 30041, United States",08:30:00,8,34.1345419,-84.1235545
+Court Park 8,"Ponkan Road, Orange County, Florida, 32712, United States",10:30:00,14,28.7295618,-81.5430862
+Court Park 9,"York Street, Camden, Kershaw County, South Carolina, 29020, United States",10:00:00,8,34.2413478,-80.6113012
+Court Park 10,"South Fiske Boulevard, Rockledge, Brevard County, Florida, 32956, United States",06:00:00,8,28.3352536,-80.7429497
+Court Park 11,"Spring Park, Williamston, Anderson County, South Carolina, 29697, United States",06:30:00,4,34.6168816,-82.4786912
+Court Park 12,"West Gulf Drive, Ybel, Sanibel, Lee County, Florida, 33957, United States",07:30:00,14,26.4249228,-82.0926365
+Court Park 13,"University of West Florida, 11000, University Parkway, Pensacola, Escambia County, Florida, 32514, United States",07:00:00,8,30.5470004,-87.2206507
+Court Park 14,"Marshall Street, Safety Harbor, Pinellas County, Florida, 34695, United States",06:00:00,12,28.002169,-82.6958336
+Court Park 15,"Stoney Creek Pickleball Courts, Autumn Road, Sugar Creek, Greenville County, South Carolina, 29650, United States",09:00:00,14,34.8792764,-82.2628663
+Court Park 16,"Oceans West Boulevard, Daytona Beach Shores, Volusia County, Florida, 32119, United States",07:00:00,14,29.1659001,-80.9793677
+Court Park 17,"Virginia Avenue, Downtown Fort Myers River District, Fort Myers, Lee County, Florida, 33901, United States",09:00:00,12,26.6370152,-81.8801505
+Court Park 18,"Sarahbell Court, Cypress Cove Villas, Lee County, Florida, 33908, United States",07:00:00,6,26.4966802,-81.9147089
+Court Park 19,"Palmetto Dunes Tennis & Pickleball Center, Queens Folly Road, Palmetto Dunes, Hilton Head Island, Beaufort County, South Carolina, 29938, United States",09:30:00,8,32.1693588,-80.7198994
+Court Park 20,"Northeast 22nd Avenue, Lighthouse Point, Broward County, Florida, 33064, United States",10:00:00,14,26.2878038,-80.0932935
+Court Park 21,"Andalusia Avenue, Coral Gables, Miami-Dade County, Florida, 33134, United States",10:30:00,16,25.7476125,-80.2784381
+Court Park 22,"Lakewood Ranch Boulevard, Lakewood Ranch, Manatee County, Florida, 34211, United States",07:30:00,8,27.4451254,-82.4350384
+Court Park 23,"Overseas Highway, Rock Harbor, Key Largo, Monroe County, Florida, 33037, United States",07:00:00,12,25.0727305,-80.4658103
+Court Park 24,"Braelinn Pickleball Courts, 624, The Retreat, Summer Brooke, Peachtree City, Fayette County, Georgia, 30269, United States",06:00:00,8,33.3754832,-84.5429356
+Court Park 25,"Atlantic Boulevard, Casa Marina, Key West, Monroe County, Florida, 33040, United States",07:30:00,16,24.5475521,-81.7886252
+Court Park 26,"8th Street, Key Colony Beach, Monroe County, Florida, 33051, United States",10:30:00,10,24.7245426,-81.0212085
+Court Park 27,"Paradise Drive, Paradise Pointe, Collier County, Florida, 34114, United States",08:00:00,4,26.0375442,-81.6651861
+Court Park 28,"Morning Way, Fawn Ridge, Richland County, South Carolina, 29229, United States",08:30:00,8,34.1481644,-80.8878294
+Court Park 29,"Arab City Park Walking Trail, Arab, Marshall County, Alabama, 35016, United States",10:30:00,6,34.3188303,-86.4810703
+Court Park 30,"Veneto Drive, Pelican Preserve, Fort Myers, Lee County, Florida, 33966, United States",08:30:00,16,26.5987999,-81.7844456
+Court Park 31,"Highpoint Boulevard, Hernando County, Florida, 34613, United States",06:00:00,8,28.5412535,-82.5233289
+Court Park 32,"Laura Circle, Pioneer Village RV Resort & Resort Community, North Fort Myers, Lee County, Florida, 33917, United States",08:30:00,10,26.6817473,-81.867151
+Court Park 33,"Langford Park Pickleball, Northeast Dixie Highway, Jensen Beach, Martin County, Florida, 34957, United States",09:30:00,10,27.2252414,-80.2206081
+Court Park 34,"Lake District Lane, East Park, Orlando, Orange County, Florida, 32832, United States",07:00:00,4,28.4221038,-81.2361494
+Court Park 35,"East 6th Avenue, Mount Dora, Lake County, Florida, 32757, United States",09:00:00,4,28.8010857,-81.6443146
+Court Park 36,"National Boulevard, Sarasota National, Sarasota County, Florida, 34293, United States",07:00:00,10,27.0340683,-82.3631213
+Court Park 37,"Moyer Loop, The Villages, Lake County, Florida, United States",07:30:00,10,28.8611801,-81.9518911
+Court Park 38,"Buena Vista Boulevard, Lake Sumter Landing, The Villages, Sumter County, Florida, 32162, United States",08:00:00,6,28.897709,-81.9800733
+Court Park 39,"Southeast 5th Terrace, Crystal River, Citrus County, Florida, 34429, United States",09:30:00,8,28.8913528,-82.5817155
+Court Park 40,"Old Beach Road, Spanish Oaks, Saint Augustine Beach, Saint Johns County, Florida, 32080, United States",08:30:00,14,29.8581308,-81.2792582
+Court Park 41,"Ron Parker, Spanish Oaks, Saint Augustine Beach, Saint Johns County, Florida, 32080, United States",08:00:00,8,29.857909,-81.2791019
+Court Park 42,"Clubhouse Drive, Arbors at Freedom Plaza, Hillsborough County, Florida, 33573, United States",09:00:00,4,27.7117331,-82.3619866
+Court Park 43,"Park & Rec Road, Yonah, White County, Georgia, 30528, United States",08:00:00,16,34.6333188,-83.7539764
+Court Park 44,"Morse Boulevard, The Villages, Sumter County, Florida, 34738, United States",10:30:00,14,28.825143,-81.9728767
+Court Park 45,"Rohan Regional Recreation Center, 850, Kristine Way, Wildwood, Sumter County, Florida, 34785, United States",07:00:00,14,28.825274,-81.972377
+Court Park 46,"Antigua Way, The Isles of Collier Preserve, Collier County, Florida, 34112, United States",08:00:00,8,26.1010346,-81.7531524
+Court Park 47,"Village Parkway Southeast, Smyrna, Cobb County, Georgia, 30080, United States",08:30:00,12,33.8890976,-84.4909349
+Court Park 48,"Courtside Landings Circle, Burnt Store Marina, Lee County, Florida, 33955, United States",07:30:00,10,26.7604027,-82.0537188
+Court Park 49,"Morningside Lane, Burnt Store Colony, Charlotte County, Florida, 33955, United States",07:30:00,16,26.8022029,-82.0338425
+Court Park 50,"Lake Nona Boulevard, Lake Nona, Orlando, Orange County, Florida, 32827, United States",07:30:00,4,28.4000024,-81.2802262
+Court Park 51,"Lake Drive, Lakewood Ranch, Sarasota County, Florida, 34240, United States",06:30:00,12,27.34066,-82.4345728
+Court Park 52,"Florida Drive, Lakewood Ranch, Sarasota County, Florida, 34240, United States",08:30:00,10,27.3403193,-82.4345776
+Court Park 53,"Gardner Street, Hillside Park, Augusta, Richmond County, Georgia, 30904, United States",08:30:00,14,33.4819877,-82.0129414
+Court Park 54,"South Marlin Drive, Waveland, Saint Lucie County, Florida, 34957, United States",09:00:00,8,27.2688364,-80.2067903
+Court Park 55,"Public Beach Access path, South Beach Villas, Hilton Head Island, Beaufort County, South Carolina, 29915, United States",10:30:00,14,32.1145757,-80.8259424
+Court Park 56,"49th D Avenue East, South Bradenton, Manatee County, Florida, 34203, United States",08:30:00,12,27.4518261,-82.5593918
+Court Park 57,"14th Avenue, Vero Beach, Indian River County, Florida, 32690, United States",09:00:00,16,27.6407702,-80.3985761
+Court Park 58,"US 1, Vero Beach, Indian River County, Florida, 32690, United States",09:30:00,8,27.640786,-80.3984822
+Court Park 59,"Atlantic Avenue, Fernandina Beach, Nassau County, Florida, 32035, United States",07:00:00,6,30.6693746,-81.4544554
+Court Park 60,"Southeast Morningside Boulevard, Port Saint Lucie, Saint Lucie County, Florida, 34952, United States",09:00:00,10,27.2451097,-80.3125527
+Court Park 61,"Calistoble Loop, Amavida, Lee County, Florida, 33915, United States",06:00:00,6,26.5227202,-81.8824393
+Court Park 62,"Players Drive, Country Club East, Lakewood Ranch, Manatee County, Florida, 34202, United States",10:00:00,10,27.4055365,-82.3738788
+Court Park 63,"Pine Run Drive, Osprey, Sarasota County, Florida, 34229, United States",10:30:00,14,27.1808508,-82.4865782
+Court Park 64,"Sandy Lane, Franklin County, Florida, 32328, United States",09:30:00,12,29.6478083,-84.895829
+Court Park 65,"Calle Grand Street, Palma Sola Park, Bradenton, Manatee County, Florida, 34209, United States",09:00:00,10,27.4868653,-82.6324378
+Court Park 66,"Arbor Lake Drive, Collier County, Florida, 34110, United States",08:30:00,10,26.3009028,-81.8198825
+Court Park 67,"Starwood Court, Arbor Grande, Lakewood Ranch, Manatee County, Florida, 34212, United States",09:00:00,8,27.4754774,-82.4259371
+Court Park 68,"Orange Blossom Road, South Venice, Sarasota County, Florida, 34293, United States",06:00:00,16,27.0278999,-82.4024629
+Court Park 69,"Sunnybreeze Drive, DeSoto County, Florida, 34266, United States",08:00:00,10,27.0508261,-81.9790076
+Court Park 70,"Northwest 169th Avenue, Pembroke Pines, Broward County, Florida, 33082, United States",06:30:00,4,26.0174486,-80.373576
+Court Park 71,"4th Street North, Bradenton Beach, Manatee County, Florida, 34217, United States",07:00:00,10,27.4677152,-82.6986629
+Court Park 72,"Pickleball Court, Andean Fox Drive, Jacksonville, Duval County, Florida, 32222, United States",07:30:00,16,30.1980344,-81.841696
+Court Park 73,"Huntington Woods Avenue, Spring Hill, Hernando County, Florida, 34609, United States",06:00:00,10,28.4443915,-82.5114195
+Court Park 74,"Everard Drive, Spring Hill, Hernando County, Florida, 34609, United States",09:00:00,4,28.4442509,-82.5113555
+Court Park 75,"South Dixie Highway, Boca Raton, Palm Beach County, Florida, 33432, United States",06:30:00,4,26.3291298,-80.094268
+Court Park 76,"Bay Indies Boulevard, Bay Indies, Venice, Sarasota County, Florida, 34285, United States",10:00:00,14,27.1122643,-82.4273507
+Court Park 77,"East New England Boulevard, Palm Beach County, Florida, 33434, United States",10:00:00,16,26.3907206,-80.1773793
+Court Park 78,"Clubhouse Lane, Hunters Run, Boynton Beach, Palm Beach County, Florida, 33436, United States",06:00:00,6,26.4922396,-80.1012923
+Court Park 79,"Carillon Boulevard, Lakeland, Polk County, Florida, 33811, United States",08:00:00,10,28.0063518,-82.0248475
+Court Park 80,"Steeplechase Lane, Horseshoe Bend Clubside, Roswell, Fulton County, Georgia, 30076, United States",07:00:00,10,33.9820035,-84.2970333
+Court Park 81,"Falls Drive, Orange County, Florida, 32836, United States",08:00:00,8,28.363619,-81.5070913
+Court Park 82,"Barefoot Boulevard, Barefoot Bay, Brevard County, Florida, 32976, United States",07:30:00,16,27.8870917,-80.5158624
+Court Park 83,"Easterwood Drive, Perkins, Tallahassee, Leon County, Florida, 32301, United States",10:30:00,4,30.4449156,-84.215548
+Court Park 84,"Spicewood Lane, Harmony Reserve, Indian River County, Florida, 32966, United States",06:30:00,16,27.6566239,-80.451731
+Court Park 85,"South River Road, Sarasota County, Florida, 34223, United States",10:00:00,10,26.9694801,-82.3314581
+Court Park 86,"Club House Drive, Saint Lucie County, Florida, 34986, United States",06:30:00,8,27.3277662,-80.4247259
+Court Park 87,"Corkscrew Shores Boulevard, Corkscrew Lakes, Lee County, Florida, United States",10:30:00,10,26.4496057,-81.714771
+Court Park 88,"Myrica Drive, Esplanade, Starkey Ranch, Pasco County, Florida, 34656, United States",07:00:00,6,28.2104872,-82.6270421
+Court Park 89,"Millington Way, Palm Beach County, Florida, 33484, United States",09:30:00,8,26.4657679,-80.1417614
+Court Park 90,"Natures Way Boulevard, Hillsborough County, Florida, 33596, United States",09:30:00,8,27.8842277,-82.2642598
+Court Park 91,"Lake Trout Drive, Atla Lakes, Jacksonville, Duval County, Florida, 32226, United States",07:30:00,12,30.4431401,-81.5770008
+Court Park 92,"Heritage Hills Boulevard, Heritage Hills, Clermont, Lake County, Florida, 34711, United States",06:00:00,12,28.5136873,-81.6957383
+Court Park 93,"Southwest Brighton Way, Palm City, Martin County, Florida, 34990, United States",10:30:00,8,27.1793042,-80.2909224
+Court Park 94,"Northwest 2nd Avenue, Delray Beach, Palm Beach County, Florida, 33444, United States",06:30:00,4,26.4638182,-80.0755942
+Court Park 95,"South Powerline Road, West Deerfield Beach, Deerfield Beach, Broward County, Florida, 33442, United States",10:30:00,12,26.3105903,-80.1523264
+Court Park 96,"West 8th Court, Hialeah, Miami-Dade County, Florida, 33012, United States",08:30:00,4,25.8592538,-80.2992157
+Court Park 97,"Balsawood Court, Altamonte Springs, Seminole County, Florida, 32714, United States",10:30:00,6,28.6696314,-81.4091525
+Court Park 98,"Parkwood Court, Altamonte Springs, Seminole County, Florida, 32714, United States",08:00:00,10,28.6696697,-81.4090775
+Court Park 99,"Hunt Creek Drive, Paulding County, Georgia, United States",07:30:00,10,34.0513537,-84.7777466
+Court Park 100,"East Madison Street, Cairo, Tampa, Hillsborough County, Florida, 33602, United States",07:30:00,10,27.9516865,-82.4472813
+Court Park 101,"South Bay Drive, Bonita Springs, Lee County, Florida, 13434, United States",09:00:00,16,26.3503836,-81.8101638
+Court Park 102,"White Place, Port Orange, Volusia County, Florida, 32127, United States",08:00:00,8,29.1347454,-80.9845257
+Court Park 103,"Brookfair Crescent, Daytona Beach Shores, Volusia County, Florida, 32118, United States",10:30:00,10,29.1658022,-80.9786472
+Court Park 104,"Tugboat Lane, Cane Bay Plantation, Berkeley County, South Carolina, United States",06:00:00,4,33.1211447,-80.0953149
+Court Park 105,"Cane Bay Boulevard, Berkeley County, South Carolina, United States",10:00:00,6,33.1359116,-80.0979732
+Court Park 106,"I 95, Chapel Hill, Boynton Beach, Palm Beach County, Florida, 33444, United States",07:00:00,8,26.4950455,-80.0821532
+Court Park 107,"Azalea Lane, Winter Park, Orange County, Florida, 32789, United States",09:00:00,4,28.5880806,-81.3591685
+Court Park 108,"Waterside Parkway, Palm Coast, Flagler County, Florida, United States",06:30:00,8,29.5367022,-81.1688547
+Court Park 109,"Cottage Lane, Daytona Beach, Volusia County, Florida, 32114, United States",09:30:00,10,29.2066262,-81.0179014
+Court Park 110,"South Beach Street, Daytona Beach, Volusia County, Florida, 32114, United States",10:00:00,10,29.206751,-81.0175948
+Court Park 111,"Griffin Road, Lake County, Florida, 32159, United States",10:00:00,10,28.9305376,-81.8556555
+Court Park 112,"Saint Lawrence Drive, Lake County, Florida, 32735, United States",10:00:00,8,28.9287162,-81.7635956
+Court Park 113,"Maple Leaf Golf and Country Club, 2100, Kings Highway, Port Charlotte, Charlotte County, Florida, 33980, United States",07:00:00,16,26.9956581,-82.0494297
+Court Park 114,"Northwest 94th Avenue, Plantation, Broward County, Florida, 33322, United States",10:30:00,4,26.1397282,-80.2746889
+Court Park 115,"Embassy Drive North, Embassy Lakes, Cooper City, Broward County, Florida, 33026, United States",07:00:00,8,26.0430878,-80.2866666
+Court Park 116,"Southwest 36th Street, Pine Island, Davie, Broward County, Florida, 33328, United States",06:30:00,14,26.0754342,-80.2659312
+Court Park 117,"Millerstone Drive, Silverleaf VIllage, Silverleaf, Saint Johns County, Florida, 32251, United States",08:00:00,6,30.0181799,-81.5085897
+Court Park 118,"Southwest 82nd Avenue, Pine Island, Davie, Broward County, Florida, 33328, United States",08:30:00,4,26.0475371,-80.2576981
+Court Park 119,"Northwest 75th Place, Parkland, Broward County, Florida, 33067, United States",06:00:00,10,26.325412,-80.2150809
+Court Park 120,"North Boulevard, Cartagena, Tampa, Hillsborough County, Florida, 33601, United States",07:00:00,10,27.9535629,-82.4681691
+Court Park 121,"Republic Drive, Turner Oak Hill Estates, Collier County, Florida, 34112, United States",06:30:00,8,26.1056972,-81.7643161
+Court Park 122,"Elbow Avenue, The Isles of Collier Preserve, Collier County, Florida, 34112, United States",09:30:00,10,26.1056984,-81.7640958
+Court Park 123,"Haiti Drive, The Isles of Collier Preserve, Collier County, Florida, 34112, United States",07:00:00,8,26.1054093,-81.7639834
+Court Park 124,"Thomasson Drive, East Naples, Collier County, Florida, 34112, United States",06:30:00,8,26.1079972,-81.7643773
+Court Park 125,"Karen Drive, Collier County, Florida, 34112, United States",09:00:00,10,26.106645,-81.7642342
+Court Park 126,"12th Street, Indian River County, Florida, 32960, United States",08:00:00,6,27.6245219,-80.4085412
+Court Park 127,"Fleischmann Boulevard, Naples, Collier County, Florida, 34102, United States",06:30:00,16,26.1679101,-81.7926901
+Court Park 128,"53rd Street, Indian River County, Florida, United States",10:30:00,12,27.6913469,-80.4334955
+Court Park 129,"William Smith Boulevard, Crawford Creek, Columbia County, Georgia, 30809, United States",08:30:00,14,33.5183764,-82.179056
+Court Park 130,"Hawkpark Boulevard, FishHawk Ranch, Hillsborough County, Florida, 33547, United States",08:00:00,12,27.8547831,-82.1918101
+Court Park 131,"G Martin Harold Drive, Fort Lauderdale, Broward County, Florida, 33304, United States",09:00:00,10,26.1332994,-80.132785
+Court Park 132,"Bradley Point Road, Bradley Point, Whitemarsh Island, Chatham County, Georgia, 31410, United States",07:00:00,14,32.0185641,-81.0165583
+Court Park 133,"Breakers Landing, Saint Lucie County, Florida, United States",08:00:00,8,27.5253431,-80.3144476
+Court Park 134,"Indus Valley Circle, Manatee County, Florida, 34219, United States",09:00:00,8,27.5768895,-82.419103
+Court Park 135,"Cypress Parkway, Babcock Ranch, Charlotte County, Florida, United States",10:00:00,10,26.7835805,-81.7387607
+Court Park 136,"Hickory Flat Highway, Holly Springs, Cherokee County, Georgia, 30114, United States",09:30:00,16,34.1812985,-84.4347318
+Court Park 137,"Jack Page Lane, White City, Cherokee County, Georgia, 30114, United States",06:00:00,10,34.2516966,-84.3774521
+Court Park 138,"West Whisper Walk Boulevard, Whisper Walk, Palm Beach County, Florida, 33434, United States",09:00:00,8,26.3971531,-80.1820077
+Court Park 139,"Billfish Circle, The Retreat at Trinity, Starkey Ranch, Pasco County, Florida, 35655, United States",08:00:00,10,28.1856741,-82.6236705
+Court Park 140,"1st Street, Parkwood Estates, Bayview, Clearwater, Pinellas County, Florida, 34619, United States",10:00:00,10,27.9616967,-82.7162485
+Court Park 141,"Grande Shores Drive, Lakewood Ranch, Sarasota County, Florida, 34240, United States",10:30:00,8,27.3688741,-82.4086058
+Court Park 142,"Sea Ranch Drive, Gulf Island, Hudson, Pasco County, Florida, 34667, United States",06:30:00,14,28.3575717,-82.7164135
+Court Park 143,"Poinciana Circle, Colony Cove, Pasco County, Florida, 34653, United States",07:00:00,8,28.2353981,-82.6992334
+Court Park 144,"Cowan Road, Spalding County, Georgia, 30223, United States",06:00:00,10,33.2810585,-84.310941
+Court Park 145,"Main Street, Jackson Oak, Daphne, Baldwin County, Alabama, 36526, United States",09:00:00,14,30.6063756,-87.901945
+Court Park 146,"Sugar Maple Drive, Sugar Hill, Gwinnett County, Georgia, 30518, United States",10:30:00,12,34.097886,-84.0429017
+Court Park 147,"Riversong Court Northwest, Gwinnett County, Georgia, 30024, United States",07:30:00,16,34.0336847,-84.1024252
+Court Park 148,"Hamby Road Northwest, Hamby Place, Cobb County, Georgia, 30102, United States",07:30:00,10,34.0740429,-84.602096
+Court Park 149,"Magnolia Club Drive, Buford, Gwinnett County, Georgia, 30518, United States",09:00:00,8,34.0951141,-84.0166238
+Court Park 150,"Triune Drive, The Gallery at Trinity, Starkey Ranch, Pasco County, Florida, 34656, United States",06:30:00,12,28.189018,-82.6113394
+Court Park 151,"Matisse Circle, The Gallery at Trinity, Starkey Ranch, Pasco County, Florida, 34656, United States",09:30:00,10,28.189004,-82.6114333
+Court Park 152,"Spinnaker Drive, Alpharetta, Fulton County, Georgia, 30005, United States",09:00:00,10,34.0778332,-84.2378836
+Court Park 153,"Lake Windward Drive, Alpharetta, Fulton County, Georgia, 30005, United States",09:30:00,6,34.0787828,-84.2393085
+Court Park 154,"Timber Greens Boulevard, Timber Greens, River Ridge, Pasco County, Florida, 34653, United States",09:00:00,8,28.2507637,-82.6578282
+Court Park 155,"Cannon Rush Drive, Pasco County, Florida, 33576, United States",07:00:00,12,28.310172,-82.2909813
+Court Park 156,"Peachtree Road, Hoschton, Jackson County, Georgia, 30548, United States",07:00:00,10,34.0863292,-83.7595754
+Court Park 157,"Chatuge Drive, Hoschton, Jackson County, Georgia, 30548, United States",10:30:00,10,34.0860555,-83.7601575
+Court Park 158,"Recreation Complex, Hall County, Georgia, United States",08:30:00,16,34.1245407,-83.8419459
+Court Park 159,"Del Webb Boulevard, Spalding County, Georgia, United States",06:00:00,4,33.315605,-84.2403606
+Court Park 160,"Crooked Creek Road, Crooked Creek, Putnam County, Georgia, 31024, United States",10:00:00,8,33.2624529,-83.2501414
+Court Park 161,"Overseas Highway, Monroe County, Florida, 33001, United States",07:30:00,12,24.806145,-80.8454082
+Court Park 162,"Belair Lane, Park Shore, Naples, Collier County, Florida, 34103, United States",10:30:00,16,26.1991889,-81.8033492
+Court Park 163,"Pickleball Courts, Peeples Valley Road Northeast, Cartersville, Bartow County, Georgia, 30121, United States",06:30:00,14,34.2466011,-84.8086016
+Court Park 164,"Brookstone Way, Flowery Branch, Hall County, Georgia, 30542, United States",10:00:00,8,34.1421282,-83.9044959
+Court Park 165,"Lake Crossing Drive, Flowery Branch, Hall County, Georgia, 30542, United States",09:00:00,10,34.1420887,-83.9042869
+Court Park 166,"Thompson Mill Road, Braselton, Hall County, Georgia, 30548, United States",06:30:00,10,34.1067443,-83.858624
+Court Park 167,"Auburn Gate Lane, Auburn, Barrow County, Georgia, 30011, United States",06:30:00,6,34.0082426,-83.8445843
+Court Park 168,"Pine Grove Road, Forsyth County, Georgia, 30041, United States",08:30:00,8,34.1113086,-84.1974393
+Court Park 169,"Civic Drive, Ball Ground, Cherokee County, Georgia, 30107, United States",08:00:00,10,34.3378954,-84.3730425
+Court Park 170,"Mountain Boulevard, Grandview at Gateway, Jasper, Pickens County, Georgia, 30143, United States",08:00:00,8,34.416616,-84.4313141
+Court Park 171,"Martin Road, Dawson County, Georgia, 30534, United States",10:00:00,10,34.3636953,-84.119894
+Court Park 172,"Seabrook Island Road, Camp Saint Christopher, Seabrook Island, Charleston County, South Carolina, United States",07:30:00,8,32.5921692,-80.1636671
+Court Park 173,"Rockhurst Way, Anderson Grant, Spartanburg County, South Carolina, 29375, United States",08:30:00,10,34.8457515,-82.0800024
+Court Park 174,"Fall Branch Lane, Hall County, Georgia, United States",06:30:00,8,34.1141241,-83.9051226
+Court Park 175,"Houston Road, Macon, Bibb County, Georgia, 31216, United States",08:00:00,10,32.7094421,-83.6988903
+Court Park 176,"Flynn Park Pickleball Court, Orange Picker Road, Mandarin, Jacksonville, Duval County, Florida, 32223, United States",06:00:00,8,30.1492208,-81.6397803
+Court Park 177,"Siena Circle, Wellington, Palm Beach County, Florida, 33447, United States",10:00:00,16,26.6380265,-80.2114092
+Court Park 178,"Navy Hill Circle, Village of Richmond, Brownwood, Wildwood, Sumter County, Florida, 34785, United States",08:00:00,4,28.8349589,-82.0249524
+Court Park 179,"San Salvador Street, Duck Key, Monroe County, Florida, United States",06:30:00,8,24.7704343,-80.9110954
+Court Park 180,"Excalibur Circle, Avalon, Pelican Bay, Collier County, Florida, 34108, United States",10:00:00,10,26.2502717,-81.8086785
+Court Park 181,"Mahogany Drive, Pine Ridge Estates, Collier County, Florida, 34108, United States",07:00:00,4,26.2261429,-81.7939782
+Court Park 182,"Park Shore Drive, Park Shore, Naples, Collier County, Florida, 34103, United States",08:30:00,8,26.1918855,-81.8027225
+Court Park 183,"Gulf Shore Boulevard North, Park Shore, Naples, Collier County, Florida, 34103, United States",08:30:00,12,26.2063196,-81.81473
+Court Park 184,"Turtle Bay Drive, Pelican Bay, Collier County, Florida, 34801, United States",09:30:00,4,26.2157779,-81.8109999
+Court Park 185,"Gulfshore Drive, Vanderbilt Beach, Collier County, Florida, 34108, United States",10:00:00,14,26.2683767,-81.8252959
+Court Park 186,"Bluebill Avenue, Collier County, Florida, 34108, United States",09:30:00,14,26.2743236,-81.8244806
+Court Park 187,"Bluebill Avenue, Collier County, Florida, 34110, United States",09:00:00,10,26.2753949,-81.8251809
+Court Park 188,"18th Avenue Northeast, Golden Gate Estates, Collier County, Florida, United States",10:00:00,8,26.2648831,-81.5231416
+Court Park 189,"27th Court Southwest, Collier County, Florida, 34116, United States",10:30:00,8,26.1792193,-81.6916144
+Court Park 190,"Golden Gate Middle School, Tropicana Boulevard, Collier County, Florida, 34116, United States",08:00:00,8,26.176341,-81.7055111
+Court Park 191,"Monarch Circle, Collier County, Florida, 34116, United States",06:30:00,8,26.1653924,-81.7223959
+Court Park 192,"Santa Barbara Boulevard, Collier County, Florida, 34116, United States",06:00:00,8,26.1679709,-81.7180242
+Court Park 193,"Forest Lakes Boulevard, Collier County, Florida, 34105, United States",10:30:00,10,26.2098477,-81.7779859
+Court Park 194,"Kensington High Street, Kensington, Collier County, Florida, 34105, United States",09:00:00,16,26.2108844,-81.7610109
+Court Park 195,"Wildwood Lane, Naples, Collier County, Florida, 34105, United States",06:30:00,8,26.172114,-81.7744537
+Court Park 196,"River Reach Drive, River Reach Apartments, Collier County, Florida, 34102, United States",06:00:00,6,26.1613447,-81.7817337
+Court Park 197,"Dockside Drive, Collier County, Florida, 34110, United States",07:30:00,12,26.2914411,-81.8209434
+Court Park 198,"Vanderbilt Drive, Collier County, Florida, 34110, United States",06:30:00,16,26.2898767,-81.8188367
+Court Park 199,"Grand Lely Drive, Cordoba, Lely Resort, Collier County, Florida, 34113, United States",10:00:00,10,26.0884141,-81.6964123
+Court Park 200,"Grand Lely Drive, Players Cove, Lely Resort, Collier County, Florida, 34113, United States",08:30:00,6,26.0917476,-81.6971996
+Court Park 201,"Mahogany Run Lane, Green Links, Lely Resort, Collier County, Florida, 34113, United States",09:30:00,8,26.0863264,-81.7003946
+Court Park 202,"Sorrento Lane, Verona Walk, Collier County, Florida, 33962, United States",06:30:00,8,26.0890642,-81.677941
+Court Park 203,"Viale Circle, Esplanade at Hacienda Lakes, Collier County, Florida, 33962, United States",07:00:00,10,26.105979,-81.6756182
+Court Park 204,"Indian Key Lane, Westl Lke, Collier County, Florida, 34114, United States",10:30:00,12,26.0411937,-81.6615871
+Court Park 205,"Tamiami Trail, Collier County, Florida, 34114, United States",08:30:00,8,26.0461332,-81.6755911
+Court Park 206,"Tripetal Lane, Collier County, Florida, 34114, United States",09:00:00,6,26.0459806,-81.6760223
+Court Park 207,"Manatee School Campus, Manatee Road, Collier County, Florida, 34114, United States",10:30:00,8,26.0445999,-81.6798749
+Court Park 208,"Zane Gray Creek Drive, Layton, Monroe County, Florida, 33001, United States",07:30:00,8,24.8240593,-80.8154818
+Court Park 209,"Florida Keys Overseas Heritage Trail, Layton, Monroe County, Florida, 33001, United States",07:30:00,16,24.8242216,-80.8155163
+Court Park 210,"Grand Rapids Boulevard, Golden Gate Estates, Collier County, Florida, 34143, United States",10:00:00,16,26.300123,-81.5927751
+Court Park 211,"Corso Mediterra Circle, Collier County, Florida, 34110, United States",10:00:00,10,26.3093832,-81.7685257
+Court Park 212,"Valewood Drive, Collier County, Florida, 34119, United States",07:00:00,8,26.2958747,-81.7307952
+Court Park 213,"Northbrooke Drive, Collier County, Florida, 34119, United States",08:30:00,8,26.2929437,-81.7406218
+Court Park 214,"Paradise Circle, Collier County, Florida, 34110, United States",07:00:00,8,26.2923678,-81.7457963
+Court Park 215,"Valecas Ln,, Collier County, Florida, 34110, United States",08:30:00,10,26.2854803,-81.7582079
+Court Park 216,"Sandpiper Street, Royal Harbor, Naples, Collier County, Florida, 34102, United States",08:30:00,8,26.1295689,-81.7816497
+Court Park 217,"Georgetown Boulevard, Royal Harbor, East Naples, Collier County, Florida, 34112, United States",10:30:00,12,26.1289498,-81.7802561
+Court Park 218,"Lely High School, Lely High School Boulevard, The Majors, Lely, Collier County, Florida, 34113, United States",06:30:00,8,26.0874777,-81.7184415
+Court Park 219,"Night Heron Lane, Collier County, Florida, United States",10:30:00,16,26.2509673,-81.6544451
+Court Park 220,"Vineyards Boulevard, Collier County, Florida, 34119, United States",08:00:00,10,26.2280574,-81.7313412
+Court Park 221,"Mill Pond Circle, Emerald Lakes, Collier County, Florida, 34109, United States",06:30:00,8,26.2381539,-81.7731148
+Court Park 222,"Airport Pulling Road, Collier County, Florida, 34109, United States",06:30:00,8,26.2350243,-81.7681362
+Court Park 223,"Bermuda Isle Circle, Collier County, Florida, 34109, United States",10:00:00,10,26.2434418,-81.752249
+Court Park 224,"Toscana Way, Collier County, Florida, 34119, United States",09:00:00,4,26.2688996,-81.6878406
+Court Park 225,"Crystal Lake Drive, Collier County, Florida, 34119, United States",06:00:00,8,26.2668371,-81.6788476
+Court Park 226,"Bronwood Place, Collier County, Florida, 34119, United States",09:30:00,14,26.2714295,-81.677283
+Court Park 227,"Burnham Road, Bonita Springs, Collier County, Florida, 34135, United States",09:00:00,8,26.3164636,-81.7333229
+Court Park 228,"Sterling Oaks Drive, Collier County, Florida, 34110, United States",06:30:00,14,26.3124846,-81.8024778
+Court Park 229,"Woods Edge Parkway, Bermuda Lago Condos, Bonita Springs, Collier County, Florida, 13434, United States",09:00:00,8,26.3151194,-81.8137033
+Court Park 230,"College Street, West Hampton, Hampton, Henry County, Georgia, 30228, United States",09:00:00,16,33.3886751,-84.2863944
+Court Park 231,"Pelican Marsh Boulevard, Pelican Marsh, Collier County, Florida, 34109, United States",10:30:00,6,26.256847,-81.7872781
+Court Park 232,"Orange Blossom Drive, Carlisle, Collier County, Florida, 34109, United States",07:30:00,10,26.2323406,-81.7785195
+Court Park 233,"Lone Oak Boulevard, Walden Oaks, Collier County, Florida, 34109, United States",06:00:00,10,26.2293122,-81.764392
+Court Park 234,"Ilex Circle, Walden Oaks, Collier County, Florida, 34109, United States",10:00:00,4,26.2264704,-81.7596195
+Court Park 235,"Monticello Boulevard, Marbella Isles, Collier County, Florida, 34109, United States",07:30:00,12,26.2263044,-81.7595329
+Court Park 236,"Myrtle Road, Pine Ridge Estates, Collier County, Florida, 34108, United States",06:00:00,8,26.2352162,-81.7971972
+Court Park 237,"Colliers Reserve Drive, Palm River Shores, Collier County, Florida, 34110, United States",08:30:00,8,26.2822157,-81.793782
+Court Park 238,"Veterans Park Drive, Palm River Shores, Collier County, Florida, 34110, United States",07:30:00,8,26.2676023,-81.7833566
+Court Park 239,"Southwest Health Parkway, Palm River Shores, Collier County, Florida, 34109, United States",09:30:00,4,26.2684927,-81.7848219
+Court Park 240,"Airport Pulling Road, Four Seasons, Collier County, Florida, 34109, United States",08:00:00,10,26.266717,-81.769281
+Court Park 241,"Castaways Court, Collier County, Florida, 34119, United States",10:30:00,14,26.2630094,-81.7394953
+Court Park 242,"Bay Forest Drive, Collier County, Florida, 13434, United States",10:00:00,10,26.3102211,-81.8202073
+Court Park 243,"Heritage Greens Drive, Heritage Greens, Collier County, Florida, 34119, United States",09:30:00,8,26.2649448,-81.71119
+Court Park 244,"Logan Boulevard North, Collier County, Florida, 34119, United States",07:30:00,4,26.2757253,-81.7211036
+Court Park 245,"Royal Poinciana Drive, Naples, Collier County, Florida, 35105, United States",09:30:00,12,26.196939,-81.7783654
+Court Park 246,"Highpoint Circle West, High Point, Collier County, Florida, 34103, United States",07:00:00,4,26.185658,-81.7977561
+Court Park 247,"Collier County, Florida, 34104, United States",07:00:00,10,26.1453755,-81.720885
+Court Park 248,"Country Hollow Court, Collier County, Florida, 34104, United States",06:30:00,14,26.14804,-81.720945
+Court Park 249,"Coventry Court, Collier County, Florida, 34104, United States",09:30:00,8,26.149704,-81.7237376
+Court Park 250,"Northwinds Drive, Winter Park, East Naples, Collier County, Florida, 34112, United States",09:30:00,10,26.1375098,-81.7618034
+Court Park 251,"Teryl Road, The Glades, East Naples, Collier County, Florida, 34112, United States",10:30:00,6,26.1260662,-81.7561253
+Court Park 252,"The Glades Golf & Country Club, 174, Teryl Road, The Glades, Naples, Collier County, Florida, 34112, United States",06:30:00,6,26.1259343,-81.7561241
+Court Park 253,"Oakmont Court, Eagles Preserve at Shell Point, The Woodlands at Shell Point, Iona, Lee County, Florida, United States",09:00:00,6,26.5080701,-81.9868438
+Court Park 254,"Royal Bonnet Court, Palm Acres, The Island at Shell Point, Punta Rassa, Lee County, Florida, United States",10:00:00,8,26.5193018,-81.9971391
+Court Park 255,"Turquoise Avenue, Enchanting Shores, Collier County, Florida, 33962, United States",10:30:00,12,26.0483781,-81.6864785
+Court Park 256,"Coconut Palm Circle, Collier County, Florida, 34114, United States",10:30:00,10,26.045086,-81.6856514
+Court Park 257,"San Marco Road, Marco Island, Collier County, Florida, 34145, United States",07:30:00,12,25.9362135,-81.7080197
+Court Park 258,"Gulfstream Street, Marco Island, Collier County, Florida, 34145, United States",10:30:00,12,25.9360345,-81.7078645
+Court Park 259,"Marco Villas Drive, Marco Island, Collier County, Florida, 34145, United States",07:30:00,8,25.936543,-81.7147703
+Court Park 260,"Collier Court, Marco Island, Collier County, Florida, 34145, United States",06:30:00,6,25.9136237,-81.7179896
+Court Park 261,"West Flamingo Circle, Marco Island, Collier County, Florida, 34145, United States",06:30:00,8,25.9352704,-81.729345
+Court Park 262,"South Collier Boulevard, Marco Island, Collier County, Florida, 34145, United States",06:30:00,12,25.9344118,-81.731544
+Court Park 263,"Public Beach Access, Marco Island, Collier County, Florida, 34145, United States",07:30:00,10,25.9305614,-81.7298348
+Court Park 264,"Ironwood Court, Marco Island, Collier County, Florida, 34145, United States",08:30:00,4,25.928909,-81.7271851
+Court Park 265,"Eagle's Nest Beach Resort, 410, South Collier Boulevard, Marco Island, Collier County, Florida, 34145, United States",07:00:00,10,25.9265166,-81.7279585
+Court Park 266,"Seagrape Drive, Marco Island, Collier County, Florida, 34145, United States",07:00:00,8,25.9168546,-81.7258649
+Court Park 267,"Trinidad Avenue, Marco Island, Collier County, Florida, 34145, United States",06:30:00,6,25.9405765,-81.71248
+Court Park 268,"Hideaway Circle East, Marco Island, Collier County, Florida, 34145, United States",07:00:00,10,25.9611079,-81.7444421
+Court Park 269,"Bayside Court, Marco Island, Collier County, Florida, 34145, United States",06:00:00,10,25.9438712,-81.7332424
+Court Park 270,"Seaview Court, Marco Island, Collier County, Florida, 34145, United States",09:30:00,10,25.9458591,-81.7373149
+Court Park 271,"Collingswood Court, Marco Island, Collier County, Florida, 34145, United States",07:30:00,14,25.9255081,-81.7033387
+Court Park 272,"Mainsail Drive, Marco Shores–Hammock Bay, Collier County, Florida, United States",06:00:00,8,26.0014552,-81.6928656
+Court Park 273,"Fiddler's Creek, 8152, Marsh Drive, Naples, Collier County, Florida, 34114, United States",06:30:00,10,26.0234191,-81.6814031
+Court Park 274,"Club Center Boulevard, Collier County, Florida, 34114, United States",07:00:00,12,26.02342,-81.6813109
+Court Park 275,"Orchid Terrace Way, Collier County, Florida, United States",06:30:00,12,25.9601184,-81.5091399
+Court Park 276,"Tamiami Trail, Collier County, Florida, United States",09:30:00,10,25.9600032,-81.5091365
+Court Park 277,"Newport Drive, Collier County, Florida, 34114, United States",09:00:00,10,25.9587877,-81.511791
+Court Park 278,"Graystone Boulevard, Naples Motorcoach Resort, Collier County, Florida, 33962, United States",06:30:00,16,26.055161,-81.6898113
+Court Park 279,"Fox Haven Drive, East Naples, Collier County, Florida, 34104, United States",10:00:00,16,26.1487451,-81.74556
+Court Park 280,"Southampton Drive, Worthington Country Club, Bonita Springs, Lee County, Florida, 34135, United States",07:00:00,10,26.3285214,-81.727122
+Court Park 281,"Cavendish Court, Worthington Country Club, Bonita Springs, Lee County, Florida, 34135, United States",07:00:00,14,26.331,-81.7225906
+Court Park 282,"Bellino Terrace, Palmira, Bonita Springs, Lee County, Florida, United States",10:00:00,10,26.3280646,-81.7132893
+Court Park 283,"28527, Alessandria Circle, Palmira, Bonita Springs, Lee County, Florida, 34135, United States",09:30:00,10,26.3279327,-81.7104308
+Court Park 284,"28535, Alessandria Circle, Palmira, Bonita Springs, Lee County, Florida, 34135, United States",07:00:00,12,26.3277673,-81.7104323
+Court Park 285,"Latitude Drive, Village Walk, Bonita Springs, Lee County, Florida, United States",09:00:00,16,26.3239984,-81.698258
+Court Park 286,"Sicily Loop, Valencia Bonita, Bonita Springs, Lee County, Florida, United States",10:30:00,16,26.3224485,-81.6845205
+Court Park 287,"Seasons Coast Drive, Seasons, Bonita Springs, Lee County, Florida, United States",06:00:00,4,26.3278081,-81.6797063
+Court Park 288,"West Avenue, Collier County, Florida, 34134, United States",09:00:00,10,26.3264308,-81.8274551
+Court Park 289,"5th Street West, Collier County, Florida, 13434, United States",09:30:00,14,26.3262653,-81.8274521
+Court Park 290,"Bonita Beach Road, Bonita Shores, Collier County, Florida, 13434, United States",09:00:00,6,26.3301277,-81.8320821
+Court Park 291,"Southport Cove, Barefoot Beach, Collier County, Florida, 34134, United States",08:30:00,14,26.3260432,-81.8416105
+Court Park 292,"Queens Kew, Bonita Springs, Lee County, Florida, 34134, United States",08:00:00,4,26.3318741,-81.842311
+Court Park 293,"Riverwalk Way, Bonita Heights Mobile Home Park, Bonita Springs, Lee County, Florida, 13434, United States",10:30:00,12,26.3380576,-81.8170568
+Court Park 294,"Legacy Trail, Towles Court, Sarasota, Sarasota County, Florida, 34237, United States",07:30:00,16,27.3305678,-82.506896
+Court Park 295,"Paradise Shoals Road, Miralia, Vinings, Cobb County, Georgia, 30339, United States",07:30:00,16,33.8420161,-84.4803941
+Court Park 296,"Burke Veterans Parkway, Burke County, Georgia, 30830, United States",10:30:00,12,33.0757744,-81.9948433
+Court Park 297,"Inverness Point Drive, Hoover, Shelby County, Alabama, 35261, United States",08:00:00,8,33.4143822,-86.7201357
+Court Park 298,"Knights Road, Hollywood, Broward County, Florida, 33021, United States",06:00:00,16,26.0173618,-80.1689568
+Court Park 299,"Eucalyptus Street, West Palm Beach, Palm Beach County, Florida, 33401, United States",08:30:00,16,26.7202538,-80.0511865
+Court Park 300,"8th Street, West Palm Beach, Palm Beach County, Florida, 33401, United States",09:30:00,12,26.7204082,-80.0511884
+Court Park 301,"Quadrille Boulevard, West Palm Beach, Palm Beach County, Florida, 33480, United States",10:30:00,8,26.7180022,-80.0499501
+Court Park 302,"North Flagler Drive, West Palm Beach, Palm Beach County, Florida, 33407, United States",06:00:00,6,26.7178492,-80.0499707
+Court Park 303,"Northwest 34th Boulevard, Gainesville, Alachua County, Florida, 32605, United States",07:30:00,4,29.7074291,-82.3537069
+Court Park 304,"Midnight Pass Road, White Beach, Sarasota County, Florida, 34242, United States",08:00:00,6,27.2224601,-82.5164041
+Court Park 305,"Suita Sun, Siesta Key, Sarasota County, Florida, 34242, United States",08:00:00,8,27.2542862,-82.5367665
+Court Park 306,"Southwest 54th Street, Dania Beach, Broward County, Florida, 33312, United States",06:00:00,14,26.0549468,-80.1794701
+Court Park 307,"Turnstone Road, Point O'Rocks, Sarasota County, Florida, 34242, United States",06:00:00,12,27.2417474,-82.5313048
+Court Park 308,"Highland Parc Place Southeast, Marietta Crossing, Marietta, Cobb County, Georgia, 30067, United States",10:00:00,4,33.9253087,-84.4831353
+Court Park 309,"Surf & Raquet Club, Siesta Key, Sarasota County, Florida, 34242, United States",06:30:00,10,27.2627764,-82.5428843
+Court Park 310,"Graham Pool, Gainesville, Alachua County, Florida, 32611, United States",09:30:00,8,29.6462802,-82.3525215
+Court Park 311,"Flavet Courts, Graham Pool, Gainesville, Alachua County, Florida, 32611, United States",10:30:00,8,29.6462826,-82.3526186
+Court Park 312,"Heritage Boulevard, Walton County, Georgia, United States",06:00:00,4,33.7417657,-83.7454927
+Court Park 313,"Harbor House Drive, Osprey, Sarasota County, Florida, 34229, United States",08:00:00,4,27.1747475,-82.4854931
+Court Park 314,"Portofino Boulevard, New Smyrna Beach, Volusia County, Florida, 32168, United States",08:30:00,10,29.0258586,-81.0264495
+Court Park 315,"Laguna Avenue, Key Largo, Monroe County, Florida, United States",10:00:00,8,25.0939716,-80.4380795
+Court Park 316,"Saint Croix Place, Key Largo, Monroe County, Florida, 33037, United States",10:00:00,16,25.0939115,-80.438147
+Court Park 317,"Caribbean Drive, Key Largo, Monroe County, Florida, 33037, United States",09:30:00,8,25.0939991,-80.437205
+Court Park 318,"South Lake Silver Drive, Winter Haven, Polk County, Florida, 33881, United States",09:00:00,16,28.0284647,-81.7296278
+Court Park 319,"Avenue F Northwest, Winter Haven, Polk County, Florida, 33881, United States",06:00:00,10,28.0283002,-81.7295365
+Court Park 320,"Blue Shores Way, Coastal Woods, Glencoe, Volusia County, Florida, 32168, United States",09:00:00,8,29.0269599,-80.9895503
+Court Park 321,"Hidden Lake Drive, Newberry, Newberry County, South Carolina, 29108, United States",06:00:00,4,34.2586709,-81.5931121
+Court Park 322,"Edgewood Avenue, Fort Myers, Lee County, Florida, 33916, United States",07:00:00,4,26.6638882,-81.842033
+Court Park 323,"Bob Dykes Drive, Westwood @ 60, Brandon, Hillsborough County, Florida, 33511, United States",09:30:00,16,27.9326193,-82.3002474
+Court Park 324,"Big Oak Drive, Clay County, Florida, United States",06:30:00,10,30.0469318,-81.7538113
+Court Park 325,"Hidden Hills Drive, Glendale, Gantt, Greenville County, South Carolina, 29605, United States",09:00:00,8,34.8018448,-82.4011481
+Court Park 326,"Hidden Hills Drive, Pine Hill Village, Gantt, Greenville County, South Carolina, 29605, United States",07:30:00,16,34.8018726,-82.4010564
+Court Park 327,"Placida Road, Placida, Charlotte County, Florida, 34223, United States",08:00:00,16,26.843393,-82.2795933
+Court Park 328,"Alicante Court, Polk County, Florida, 33836, United States",10:00:00,12,28.1749196,-81.6207085
+Court Park 329,"Harbour Oaks Boulevard, Harbour Oaks, Deep Creek, Charlotte County, Florida, 33983, United States",08:00:00,16,27.016573,-82.0039721
+Court Park 330,"Pinehurst Road, Snellville, Gwinnett County, Georgia, 30078, United States",07:30:00,8,33.8715369,-83.9966924
+Court Park 331,"Lakota Court, Pasco County, Florida, 33541, United States",08:30:00,8,28.2403226,-82.2032435
+Court Park 332,"Hemlock Trail, Canton, Cherokee County, Georgia, 30114, United States",08:00:00,10,34.2625493,-84.524774
+Court Park 333,"Springer Mountain Drive, Canton, Cherokee County, Georgia, 30114, United States",08:30:00,10,34.2625066,-84.5246954
+Court Park 334,"Braselton Highway, Gwinnett County, Georgia, 30548, United States",09:00:00,8,34.0712706,-83.9156296
+Court Park 335,"Caliente Resort and Spa, 21240, Gran Via Boulevard, Land O' Lakes, Pasco County, Florida, 34637, United States",06:00:00,6,28.2558594,-82.4639582
+Court Park 336,"Reubin O'Donovan Askew Parkway, North Hill, Pensacola, Escambia County, Florida, 32501, United States",10:00:00,8,30.429918,-87.2158667
+Court Park 337,"River Hall Parkway, Hawks Preserve, Olga, Lee County, Florida, United States",06:00:00,10,26.700007,-81.7008306
+Court Park 338,"Big Canoe Racquet Club, Wolfscratch Circle, Big Canoe, Pickens County, Georgia, 30148, United States",10:30:00,10,34.4588336,-84.2906174
+Court Park 339,"Norwich Circle Northwest, Greenhill, Huntsville, Madison County, Alabama, 35810, United States",08:30:00,4,34.7593841,-86.610164
+Court Park 340,"Hampton Park Drive, Forsyth County, Georgia, 30358, United States",10:30:00,12,34.3013478,-84.0632009
+Court Park 341,"Spruce Avenue, Canton, Cherokee County, Georgia, United States",06:30:00,8,34.2735264,-84.4675793
+Court Park 342,"Sun Shower Ridge, Canton, Cherokee County, Georgia, United States",10:30:00,10,34.2762622,-84.4855221
+Court Park 343,"Nestledown Drive, Forsyth County, Georgia, 30040, United States",10:00:00,4,34.2282987,-84.1450379
+Court Park 344,"Mason Mill Northwest, North Druid Hills, DeKalb County, Georgia, 30322, United States",08:00:00,10,33.8068296,-84.3050212
+Court Park 345,"South Peachtree Creek Trail, North Druid Hills, DeKalb County, Georgia, 30322, United States",08:30:00,6,33.8066611,-84.304688
+Court Park 346,"Myrtle Grove Lane, Richmond Hill, Bryan County, Georgia, 31324, United States",06:00:00,10,31.9340713,-81.2881476
+Court Park 347,"Central Winds Pickleball Courts, 1000, Hicks Avenue;Oviedo Road, Winter Springs, Seminole County, Florida, 32708, United States",06:00:00,12,28.7078188,-81.2750719
+Court Park 348,"Five Oaks Drive, Harmony, Osceola County, Florida, United States",10:00:00,8,28.191316,-81.1441033
+Court Park 349,"Ocean Front Boulevard, Folly Field, Hilton Head Island, Beaufort County, South Carolina, 29926, United States",06:30:00,4,32.1999706,-80.6934734
+Court Park 350,"Oakgrove Avenue, Oakgrove Estates, Saint Johns County, Florida, 32092, United States",08:00:00,16,29.9606649,-81.5157643
+Court Park 351,"Plantation Way, East Naples, Collier County, Florida, 34112, United States",10:00:00,14,26.1209038,-81.7686499
+Court Park 352,"Southwest Gingerline Drive, Port Saint Lucie, Saint Lucie County, Florida, 34853, United States",09:30:00,8,27.23144,-80.426089
+Court Park 353,"Crescent Lake Pickleball Courts, Crescent Lake Drive North, Historic Uptown, Saint Petersburg, Pinellas County, Florida, 33701, United States",10:00:00,10,27.7851883,-82.6425818
+Court Park 354,"Heron, Collier County, Florida, 34116, United States",06:30:00,10,26.1543422,-81.6691585
+Court Park 355,"Shallowford Road Northeast, Swanson Heights, Cobb County, Georgia, 30062, United States",10:00:00,10,34.0392394,-84.4689307
+Court Park 356,"Balfour Court, Aiken, Aiken County, South Carolina, 29803, United States",10:30:00,6,33.4880034,-81.7417052
+Court Park 357,"Vick Avenue, Oakland, Orange County, Florida, 34760, United States",09:30:00,10,28.5591599,-81.628396
+Court Park 358,"Boardwalk Trail, Habersham Hills, Athens, Clarke County, Georgia, 30602, United States",07:00:00,10,33.9304447,-83.3747967
+Court Park 359,"Graham Campbell Lane, Barrow County, Georgia, 30666, United States",08:30:00,16,33.9346589,-83.625082
+Court Park 360,"Georgia Club Drive, Barrow County, Georgia, 30666, United States",10:30:00,8,33.9297053,-83.6056574
+Court Park 361,"Wood Eden Lane, Beaufort County, South Carolina, 29910, United States",07:00:00,14,32.2808692,-80.8822807
+Court Park 362,"Montebello Parkway, SR Homes Montebello, Forsyth County, Georgia, 30040, United States",10:00:00,8,34.2541819,-84.1909328
+Court Park 363,"Macon Highway, Oconee County, Georgia, 30644, United States",10:30:00,4,33.8932865,-83.413258
+Court Park 364,"Sahab lane, Waters Edge, Port Orange, Volusia County, Florida, 32128, United States",09:00:00,4,29.0660364,-81.038731
+Court Park 365,"Raham Court, Waters Edge, Port Orange, Volusia County, Florida, 32128, United States",08:00:00,8,29.06604,-81.0384852
+Court Park 366,"Latitude Drive, Latitudes Margaritaville, Daytona Beach, Volusia County, Florida, 32124, United States",08:00:00,10,29.2199209,-81.1256372
+Court Park 367,"Hawks Nest Drive, Spruce Creek Fly-in, Samsula-Spruce Creek, Volusia County, Florida, 32128, United States",10:30:00,6,29.0764874,-81.0490051
+Court Park 368,"Clubhouse Drive, Spruce Creek Fly-in, Samsula-Spruce Creek, Volusia County, Florida, 32128, United States",07:00:00,10,29.0763608,-81.0488831
+Court Park 369,"Pikes Bluff Drive, Glynn County, Georgia, United States",08:00:00,6,31.2558691,-81.3646384
+Court Park 370,"Tivoli Lakes Boulevard, Palm Beach County, Florida, 33437, United States",09:30:00,16,26.5273599,-80.1554864
+Court Park 371,"International Golf Parkway, Saint Johns County, Florida, 32095, United States",10:00:00,8,29.970344,-81.4831975
+Court Park 372,"Grand Reserve Drive, Bunnell, Flagler County, Florida, 32164, United States",06:00:00,10,29.4802076,-81.2510626
+Court Park 373,"Old Canton Road, Cobb County, Georgia, 30062, United States",07:30:00,10,34.0023419,-84.4733873
+Court Park 374,"Lakehouse Trail, Lake Nona, Orlando, Orange County, Florida, 32832, United States",10:30:00,4,28.398047,-81.2604857
+Court Park 375,"Presidential Drive, Embry Hills, DeKalb County, Georgia, 30340, United States",06:30:00,8,33.8878099,-84.2613996
+Court Park 376,"ITA Atlanta, 3110, Presidential Drive, Embry Hills, DeKalb County, Georgia, 30340, United States",09:30:00,8,33.8873075,-84.2612204
+Court Park 377,"Port Boca Circle, Island Park Village, Lee County, Florida, 33915, United States",07:30:00,14,26.4856837,-81.862696
+Court Park 378,"Ream Wilson Clearwater Trail, Harbour Towne, Clearwater, Pinellas County, Florida, 34619, United States",07:00:00,8,27.9703262,-82.7070207
+Court Park 379,"Fleetwood Drive, Lookout Mountain, Walker County, East Tennessee, Georgia, 37350, United States",09:00:00,8,34.9837291,-85.3494004
+Court Park 380,"Access Road, Davie, Broward County, Florida, 33314, United States",10:00:00,10,26.07414,-80.2360343
+Court Park 381,"Gulf of Mexico Drive, Longboat Key, Sarasota County, Florida, 34228, United States",08:00:00,8,27.3887335,-82.6398689
+Court Park 382,"US 1, Delespine, Port Saint John, Brevard County, Florida, 32927, United States",06:00:00,14,28.4875027,-80.772683
+Court Park 383,"North Lake Eloise Drive Southeast, Eloise Woods, Polk County, Florida, 33884, United States",09:30:00,10,27.9959362,-81.6999803
+Court Park 384,"Areca Palm Drive, Port Orange, Volusia County, Florida, 32128, United States",09:30:00,10,29.1107712,-81.0454616
+Court Park 385,"Little Wekiva Circle, Altamonte Springs, Seminole County, Florida, 32714, United States",10:30:00,14,28.6691965,-81.4091021
+Court Park 386,"Shinnecock Drive, Palm Coast, Flagler County, Florida, United States",10:00:00,8,29.5365846,-81.1691738
+Court Park 387,"South Champion Drive, Mableton, Cobb County, Georgia, 30160, United States",06:00:00,14,33.8563835,-84.612701
+Court Park 388,"Four Oaks Boulevard, Southwood, Tallahassee, Leon County, Florida, 32399, United States",06:00:00,12,30.3804392,-84.2268922
+Court Park 389,"Hardy Springs Drive, Hiram, Paulding County, Georgia, 30157, United States",06:00:00,6,33.912992,-84.7779885
+Court Park 390,"Riverwood Way, Cross Creek, Paulding County, Georgia, 30132, United States",07:00:00,8,33.9487375,-84.7830032
+Court Park 391,"South Sea Pines Drive, South Sea Pines, Hilton Head Island, Beaufort County, South Carolina, 29928, United States",07:30:00,8,32.1145857,-80.8258577
+Court Park 392,"Beachside Drive, South Beach Villas, Hilton Head Island, Beaufort County, South Carolina, 29915, United States",08:00:00,12,32.1143192,-80.8257227
+Court Park 393,"Dolcetto Drive, Saint Johns County, Florida, 32092, United States",06:30:00,16,29.9275627,-81.5064124
+Court Park 394,"Lemoyne Avenue, Coligny, Hilton Head Island, Beaufort County, South Carolina, 29938, United States",08:30:00,8,32.1417755,-80.7600688
+Court Park 395,"Marsh Landing Boulevard, Coconut Shores, Lee County, Florida, 33928, United States",06:30:00,8,26.4075194,-81.8134975
+Court Park 396,"Forest Ridge Drive, Residences at Coconut Point, Lee County, Florida, 33928, United States",07:30:00,10,26.407353,-81.8135789
+Court Park 397,"South Airport Road, Lee County, Florida, 33907, United States",07:00:00,4,26.5767218,-81.8699831
+Court Park 398,"East Gulf Drive, Sanibel, Lee County, Florida, 33957, United States",07:30:00,16,26.4404883,-82.0375853
+Court Park 399,"Northwest 82nd Drive, Monterra, Cooper City, Broward County, Florida, 33024, United States",10:30:00,8,26.0393008,-80.2515805
+Court Park 400,"East Crown Pointe Boulevard, Crown Pointe, East Naples, Collier County, Florida, 34112, United States",09:30:00,8,26.136277,-81.7408786
+Court Park 401,"East Road, Manatee County, Florida, 34221, United States",07:30:00,8,27.5619032,-82.5327579
+Court Park 402,"Saddle Club Road, Weston, Broward County, Florida, 33327, United States",10:30:00,8,26.1031863,-80.4198617
+Court Park 403,"20200, Saddle Club Road, Weston, Broward County, Florida, 33332, United States",07:30:00,12,26.1033859,-80.419862
+Court Park 404,"Northwest 104th Avenue, Pembroke Pines, Broward County, Florida, 33026, United States",09:00:00,8,26.0132877,-80.2853671
+Court Park 405,"Summerhouse, A1A, Saint Johns County, Florida, 32084, United States",07:30:00,8,29.7180485,-81.2331541
+Court Park 406,"Waterside Circle, Marco Island, Collier County, Florida, 34145, United States",06:00:00,8,25.9396429,-81.7172033
+Court Park 407,"Avellino Way, Treviso Bay, Collier County, Florida, 34113, United States",07:00:00,10,26.0862221,-81.7470225
+Court Park 408,"Bernhard Road, Fayette County, Georgia, 30215, United States",06:30:00,10,33.3672675,-84.5186304
+Court Park 409,"Flat Creek Road, Rosemont, Shake Rag, Peachtree City, Fayette County, Georgia, 30269, United States",09:30:00,10,33.4124221,-84.5754941
+Court Park 410,"Chretien Drive, Volusia County, Florida, United States",07:30:00,10,29.3486927,-81.1237958
+Court Park 411,"Brentwood Drive Northeast, Brentwood Park, Marietta, Cobb County, Georgia, 30062, United States",10:00:00,10,33.9850532,-84.508909
+Court Park 412,"Tyrone Pickleball Courts, Multi-Use Path, Valleywood Corners, Tyrone, Fayette County, Georgia, 30290, United States",09:00:00,8,33.4703732,-84.6001318
+Court Park 413,"Willowbrook Circle Southeast, Willowbrook Condominiums, Double Tree, Huntsville, Madison County, Alabama, 35802, United States",07:30:00,10,34.6605251,-86.5357291
+Court Park 414,"Saint Edwards Drive, Indian River County, Florida, United States",08:30:00,14,27.5988743,-80.3392122
+Court Park 415,"Plantation Drive, Brevard County, Florida, United States",09:00:00,16,28.5228232,-80.8648812
+Court Park 416,"Airport Drive East, Sebastian, Indian River County, Florida, 32958, United States",08:30:00,12,27.8123473,-80.4881629
+Court Park 417,"Ulmer Road, Beaufort County, South Carolina, 29910, United States",10:30:00,8,32.2278703,-80.852387
+Court Park 418,"Waters Edge Drive, Macon, Bibb County, Georgia, 31052, United States",06:30:00,10,32.8258184,-83.7866873
+Court Park 419,"Ted Wright Drive, Warner Robins, Houston County, Georgia, 31005, United States",10:00:00,4,32.5635593,-83.6267959
+Court Park 420,"Pine Barren Lane, Cassique Garden Cottages, Charleston County, South Carolina, United States",10:00:00,16,32.5971914,-80.1537192
+Court Park 421,"Sunrise Junior High School, Northeast 18th Avenue, Fort Lauderdale, Broward County, Florida, 33304, United States",07:00:00,4,26.1439051,-80.124781
+Court Park 422,"Oconee Shores Parkway, Greene County, Georgia, United States",09:00:00,16,33.4882672,-83.2578278
+Court Park 423,"Royal Palm Tennis Club, 7001, Southwest 98th Street, Pinecrest, Miami-Dade County, Florida, 33156, United States",08:30:00,10,25.6807864,-80.3102864
+Court Park 424,"Ocean View Court, Island Club, Hilton Head Island, Beaufort County, South Carolina, 29928, United States",09:30:00,8,32.2059233,-80.687055
+Court Park 425,"Folly Field Road, Grasslawn Beach, Port Royal, Hilton Head Island, Beaufort County, South Carolina, 29928, United States",08:00:00,12,32.2056789,-80.68729
+Court Park 426,"Lamb Drive Northwest, Due West, Marietta, Cobb County, Georgia, 30152, United States",09:30:00,4,33.9573321,-84.665437
+Court Park 427,"Berry Street, St. George, Dorchester County, South Carolina, 29477, United States",07:30:00,12,33.1955922,-80.5798211
+Court Park 428,"Traditions Way, Jackson County, Georgia, United States",09:00:00,16,34.0828404,-83.6863896
+Court Park 429,"Gum Springs Church Road, Jackson County, Georgia, 30549, United States",06:00:00,8,34.083519,-83.6851877
+Court Park 430,"Kings Cross Way Northeast, Gwinnett County, Georgia, 30548, United States",08:30:00,4,34.0741804,-83.8743188
+Court Park 431,"Bicycle and Walking Trail, Beaufort County, South Carolina, United States",06:00:00,8,32.3161156,-80.4805137
+Court Park 432,"Access to Beach Club Villas, Beaufort County, South Carolina, United States",06:30:00,8,32.3160501,-80.4807067
+Court Park 433,"Sunfire Street, Lakestone, Woodruff, Spartanburg County, South Carolina, 29388, United States",08:00:00,12,34.7708275,-82.0689883
+Court Park 434,"Mill Pond Court, Jennings Mill, Oconee County, Georgia, 30622, United States",06:30:00,10,33.9206482,-83.4703128
+Court Park 435,"Wallace Road, Gwinnett County, Georgia, 30519, United States",07:30:00,12,34.0862444,-83.9420446
+Court Park 436,"North Evergreen Circle, Parkside Village, Boynton Beach, Palm Beach County, Florida, 33426, United States",09:30:00,4,26.5526924,-80.0853331
+Court Park 437,"Park Lane, Madison, Morgan County, Georgia, 30650, United States",06:00:00,8,33.5885754,-83.4742833
+Court Park 438,"South Richardson Drive, Rosswood, Bridlewood, Mobile, Mobile County, Alabama, 36606, United States",10:00:00,16,30.665496,-88.112404
+Court Park 439,"UNG Tennis Courts, Mathis Drive, Oakwood, Hall County, Georgia, 30566, United States",10:30:00,16,34.2354627,-83.8706337
+Court Park 440,"Joseph Hannah Boulevard, Newnan, Coweta County, Georgia, 30263, United States",08:30:00,10,33.3809061,-84.7961456
+Court Park 441,"North Avenue, Newnan, Coweta County, Georgia, 30263, United States",07:30:00,4,33.380925,-84.7953385
+Court Park 442,"US 41;GA 19, Smarr, Monroe County, Georgia, United States",10:30:00,10,32.9878554,-83.8837737
+Court Park 443,"North Lakeview Drive, Hillsborough County, Florida, 33618, United States",08:30:00,16,28.1040783,-82.4991723
+Court Park 444,"Flamingo Circle, Miami Springs, Miami-Dade County, Florida, 33166, United States",07:30:00,12,25.8218406,-80.2875653
+Court Park 445,"Anclote Park Road, Anclote, Pasco County, Florida, 34691, United States",07:00:00,16,28.1749301,-82.7864795
+Court Park 446,"Rendezvous Park, Moonbeam Avenue, Esplanade at Skye Ranch, Skye Ranch, Sarasota County, Florida, 34241, United States",06:30:00,4,27.2357302,-82.4029326
+Court Park 447,"28th Avenue East, Manatee County, Florida, 34221, United States",08:00:00,16,27.5642913,-82.5362824
+Court Park 448,"Cross Court Drive, Forest Estates, Augusta, Richmond County, Georgia, 30909, United States",07:00:00,16,33.4780177,-82.06987
+Court Park 449,"West Wimbledon Drive, Forest Estates, Augusta, Richmond County, Georgia, 30909, United States",10:30:00,8,33.4781483,-82.0700767
+Court Park 450,"Calumet Center Drive, LaGrange, Troup County, Georgia, 30241, United States",09:30:00,10,33.0373972,-85.007019
+Court Park 451,"Robertson Street, LaGrange, Troup County, Georgia, 30241, United States",10:00:00,10,33.0374116,-85.006903
+Court Park 452,"Sergeant William Jasper Boulevard, Hardeeville, Jasper County, South Carolina, 29909, United States",07:30:00,12,32.3093706,-80.9541301
+Court Park 453,"Watson Street, Lake Nona, Orlando, Orange County, Florida, 32827, United States",06:30:00,10,28.3689925,-81.2696347
+Court Park 454,"Selten Way, Orlando, Orange County, Florida, 32832, United States",09:30:00,12,28.3594693,-81.2458071
+Court Park 455,"Amberwood Drive, Cherokee County, Georgia, 30189, United States",07:00:00,10,34.1439295,-84.5659807
+Court Park 456,"Longwood Drive, Cherokee County, Georgia, 30189, United States",09:30:00,6,34.1439066,-84.5658784
+Court Park 457,"Acadia Street, Parkland, Broward County, Florida, 33428, United States",09:00:00,14,26.3297395,-80.222868
+Court Park 458,"Tall Willow Drive, Indian Hills, Oconee County, South Carolina, 29665, United States",07:30:00,14,34.704257,-82.9202456
+Court Park 459,"Watson Drive, Indian Hills, Oconee County, South Carolina, 29672, United States",08:30:00,4,34.7043975,-82.9199304
+Court Park 460,"West White Road, Byron, Peach County, Georgia, 31008, United States",10:30:00,14,32.6482319,-83.7489093
+Court Park 461,"Waterford Drive, Lakeland, Polk County, Florida, 33803, United States",09:00:00,14,28.0020889,-81.9359036
+Court Park 462,"Wexford Trail, South Fulton, Fulton County, Georgia, 30349, United States",06:00:00,10,33.6028942,-84.5476608
+Court Park 463,"Siloam Church Road, Greenwood County, South Carolina, 29646, United States",10:30:00,14,34.2089432,-82.0401394
+Court Park 464,"Willow Bend Road, Charlotte County, Florida, 33953, United States",07:30:00,10,26.9842039,-82.2078905
+Court Park 465,"Columbus Drive, Charlotte County, Florida, 33953, United States",06:00:00,10,26.9834757,-82.211819
+Court Park 466,"Coosaw Point Boulevard, Beaufort County, South Carolina, 29907, United States",08:00:00,4,32.4880159,-80.6169516
+Court Park 467,"Four Seasons Boulevard, Four Corners, Osceola County, Florida, 34747, United States",08:00:00,10,28.3101872,-81.5992353
+Court Park 468,"Folly Beach Road, Orlando, Orange County, Florida, 32832, United States",10:00:00,10,28.355244,-81.2431512
+Court Park 469,"Singing Post Lane Northeast, Cobb County, Georgia, 30075, United States",06:00:00,8,34.0362908,-84.4260753
+Court Park 470,"Royal Commerce Drive, Lake County, Florida, United States",08:30:00,16,28.6623323,-81.8518386
+Court Park 471,"Clemson RV Park, Champions Avenue, Anderson County, South Carolina, 29670, United States",10:00:00,8,34.6234163,-82.7858497
+Court Park 472,"Pedigree Circle, The Fields, Florida Gardens, Palm Beach County, Florida, 33467, United States",06:00:00,4,26.6054218,-80.1798859
+Court Park 473,"Sandoval Boulevard, Cape Coral, Lee County, Florida, 33991, United States",07:30:00,8,26.6223212,-82.0276444
+Court Park 474,"River Creek Lane, Osceola County, Florida, United States",08:00:00,4,28.3241602,-81.1882137
+Court Park 475,"Del Webb Boulevard, Osceola County, Florida, United States",06:30:00,6,28.3241613,-81.1881189
+Court Park 476,"Heritage Bay Boulevard, Collier County, Florida, United States",09:30:00,8,26.2856128,-81.6614891
+Court Park 477,"Woodcrest Drive, Collier County, Florida, 34120, United States",08:30:00,16,26.2712601,-81.6726124
+Court Park 478,"Periwinkle Way, Sanibel, Lee County, Florida, 03957, United States",07:00:00,8,26.451339,-82.0201954
+Court Park 479,"North Yachtsman Drive, Sanibel, Lee County, Florida, 33957, United States",10:00:00,8,26.4503784,-82.028355
+Court Park 480,"Beach Road, Sanibel, Lee County, Florida, 03957, United States",06:00:00,8,26.4398806,-82.0400604
+Court Park 481,"Olga Avenue, Sanibel, Lee County, Florida, 03957, United States",09:30:00,10,26.4387515,-82.0417708
+Court Park 482,"Shell Basket Lane, Sanibel, Lee County, Florida, 33957, United States",09:30:00,10,26.4374657,-82.0422995
+Court Park 483,"Nerita Street, Sanibel, Lee County, Florida, 33957, United States",06:00:00,6,26.4368547,-82.0442199
+Court Park 484,"Middle Gulf Drive, Sanibel, Lee County, Florida, 33957, United States",08:00:00,10,26.4369477,-82.0445756
+Court Park 485,"Middle Gulf Drive, Ybel, Sanibel, Lee County, Florida, 33957, United States",09:30:00,14,26.435257,-82.0480037
+Court Park 486,"Delano Drive, Mountain View Homes, Greenville, Greenville County, South Carolina, 29602, United States",10:30:00,8,34.8520259,-82.4149372
+Court Park 487,"Fisher Island Drive, Miami-Dade County, Florida, 33109, United States",07:30:00,12,25.7588699,-80.1409056
+Court Park 488,"Gateshead Drive, Royal Stewart Arm, Pinellas County, Florida, 34660, United States",06:00:00,6,28.0607483,-82.8125282
+Court Park 489,"Spartanburg Athletic Club, 2420, Andrews Road, Spartanburg County, South Carolina, 29302, United States",07:30:00,14,34.9333979,-81.8776937
+Court Park 490,"Captain Kirle Drive, Selhaven, Palm Beach County, Florida, 33477, United States",08:00:00,10,26.9257779,-80.0871461
+Court Park 491,"Royal Tee Circle, Lee County, Florida, 33991, United States",10:30:00,8,26.6246631,-82.032527
+Court Park 492,"Saint Andrews Boulevard, Boca Raton, Palm Beach County, Florida, 33496, United States",06:30:00,10,26.3959399,-80.1373885
+Court Park 493,"LPGA Boulevard, Holly Hill, Volusia County, Florida, 32117, United States",06:30:00,6,29.243923,-81.0425273
+Court Park 494,"North Ridgewood Avenue, Holly Hill, Volusia County, Florida, 32117, United States",07:00:00,16,29.2433952,-81.0424434
+Court Park 495,"10th Street, Holly Hill, Volusia County, Florida, 32117, United States",09:00:00,10,29.2429443,-81.0415761
+Court Park 496,"Georgetta Drive, Huntsville, Madison County, Alabama, 35801, United States",06:00:00,6,34.7400861,-86.5273862
+Court Park 497,"Interlachen Country Club, 2245, Interlachen Court, Winter Park, Seminole County, Florida, 32792, United States",06:00:00,10,28.6105007,-81.321795
+Court Park 498,"Interlachen Court, Seminole County, Florida, 32792, United States",06:30:00,10,28.6105023,-81.3217018
+Court Park 499,"Gulf Shores Sportsplex, Thornhill Circle, Gulf Shores, Baldwin County, Alabama, 36542, United States",10:00:00,8,30.3146654,-87.697297
+Court Park 500,"Oak Road, Lady Lake, Lake County, Florida, 32159, United States",07:30:00,6,28.9231671,-81.9365794
+Court Park 501,"Starlight Road, Recreation Plantation RV Park, Lady Lake, Lake County, Florida, 32159, United States",10:30:00,12,28.923005,-81.9359582
+Court Park 502,"West Guava Street, Lady Lake, Lake County, Florida, 32159, United States",07:00:00,14,28.918594,-81.9268397
+Court Park 503,"Bent Pine Drive, Orlando, Orange County, Florida, 32822, United States",08:30:00,14,28.4760811,-81.3084219
+Court Park 504,"Sun Cove Drive, Osceola County, Florida, United States",09:00:00,8,28.1573905,-81.4370379
+Court Park 505,"State Road 7, Palm Beach County, Florida, 33447, United States",07:30:00,12,26.6009088,-80.2041962
+Court Park 506,"Pickleball Court, Lookout Mountain Scenic Highway, Dade County, Georgia, 30750, United States",06:30:00,10,34.961155,-85.3745497
+Court Park 507,"Billy III Avenue, Whispering Palms, Indian River County, Florida, 32970, United States",09:30:00,16,27.7774106,-80.4524897
+Court Park 508,"Renaissance Boulevard, Miramar, Broward County, Florida, 33025, United States",06:00:00,12,25.9922862,-80.3008619
+Court Park 509,"Riveridge Court Northeast, Riverhill, Cobb County, Georgia, 30063, United States",06:30:00,14,33.9620457,-84.4051688
+Court Park 510,"Harborside Drive, Hardeeville, Jasper County, South Carolina, 29927, United States",09:30:00,12,32.2865091,-81.0239521
+Court Park 511,"Latitude Boulevard, Hardeeville, Jasper County, South Carolina, 29927, United States",08:00:00,8,32.2860328,-81.0130701
+Court Park 512,"Grass Garden Lane, Cassique Garden Cottages, Charleston County, South Carolina, United States",07:30:00,10,32.597014,-80.1538154
+Court Park 513,"Weston Regional Pickleball Court, Saddle Club Road, Weston, Broward County, Florida, 33327, United States",06:00:00,14,26.1033795,-80.4194928
+Court Park 514,"Laurel Crossing Parkway, Habersham Hills, Gwinnett County, Georgia, 30159, United States",07:00:00,8,34.0516649,-83.9910742
+Court Park 515,"Van Wert Avenue, Avondale, Jacksonville, Duval County, Florida, 33205, United States",10:00:00,10,30.2979461,-81.7109833
+Court Park 516,"Yacht Club Way, The Yacht Club On The Intracoastal, Hypoluxo, Palm Beach County, Florida, 33462, United States",09:30:00,4,26.567123,-80.0525526
+Court Park 517,"Southwest 28th Street, South Bay Estates, Miami, Miami-Dade County, Florida, 33133, United States",08:30:00,8,25.7392754,-80.2528692
+Court Park 518,"Thomson High School, Bethany Drive, Thomson, McDuffie County, Georgia, 30824, United States",08:00:00,6,33.4731863,-82.5051054
+Court Park 519,"South Ocean Boulevard, Manalapan, Lantana, Palm Beach County, Florida, 33462, United States",07:00:00,12,26.5651655,-80.0408399
+Court Park 520,"Lighthouse Drive, Jupiter Inlet Colony, Palm Beach County, Florida, 33469, United States",08:30:00,12,26.9459199,-80.0732553
+Court Park 521,"Nelson Road North, Cape Coral, Lee County, Florida, 33991, United States",10:30:00,10,26.6629722,-81.9911727
+Court Park 522,"Sandalwood Drive, Boynton Beach, Palm Beach County, Florida, 33426, United States",07:30:00,4,26.5538286,-80.0956382
+Court Park 523,"Post Landing, Boynton Landings, Boynton Beach, Palm Beach County, Florida, 33426, United States",07:00:00,14,26.5488396,-80.0922654
+Court Park 524,"Gateway Boulevard, Boynton Beach, Palm Beach County, Florida, 33426, United States",06:00:00,4,26.5467167,-80.0994293
+Court Park 525,"West Sandpiper Drive, The Villages of Banyan Grove, Palm Beach County, Florida, 33436, United States",08:30:00,6,26.545741,-80.1033787
+Court Park 526,"Max Place, Gateway Club, Palm Beach County, Florida, 33436, United States",06:00:00,4,26.5472891,-80.1038745
+Court Park 527,"Gateway Boulevard, Boynton Beach, Palm Beach County, Florida, 33436, United States",08:30:00,8,26.5465197,-80.1092424
+Court Park 528,"South 13th Street, Fernandina Beach, Nassau County, Florida, 32035, United States",10:30:00,10,30.6691813,-81.4542143
+Court Park 529,"Larry McDonald Memorial Highway, Hamby Place, Cobb County, Georgia, 30102, United States",08:00:00,10,34.0700167,-84.6117196
+Court Park 530,"Niagara Drive Northwest, Hamby Place, Cobb County, Georgia, 30102, United States",06:00:00,8,34.0739039,-84.6019889
+Court Park 531,"Northtree Boulevard, Palm Beach County, Florida, 33437, United States",06:30:00,8,26.5597402,-80.142218
+Court Park 532,"Pickleball Courts, Main Trail, Ormond Beach, Volusia County, Florida, 32174, United States",09:00:00,10,29.286252,-81.0859321
+Court Park 533,"Red Cloud Drive, Cherokee County, Georgia, 30183, United States",09:30:00,10,34.2923775,-84.6032078
+Court Park 534,"Grand Harbor - River Course, 4985, Club Terrace, Vero Beach, Indian River County, Florida, 32967, United States",09:30:00,8,27.6830352,-80.3940516
+Court Park 535,"PB #2, Wood Duck Circle, Gifford, Indian River County, Florida, 34960, United States",08:00:00,8,27.6828249,-80.3940433
+Court Park 536,"Outer Banks Drive, Shoppes of Glen Lakes, Hernando County, Florida, 34613, United States",10:30:00,8,28.5698683,-82.5617017
+Court Park 537,"Aramore Road, Gardens at Waterstone, Palm Bay, Brevard County, Florida, United States",08:30:00,16,27.9067291,-80.6396706
+Court Park 538,"Zoar Road, Chesterfield, Chesterfield County, South Carolina, 29709, United States",07:30:00,8,34.7332132,-80.0553776
+Court Park 539,"Southeast 18th Street, Ocala, Marion County, Florida, 34471, United States",07:00:00,8,29.1702397,-82.0929967
