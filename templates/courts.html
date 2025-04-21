@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Courts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F1EFE3;
+            color: #2f3e1d;
+        }
+
+        .top-nav {
+            background-color: #3D4F2D;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            font-weight: bold;
+        }
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .top-nav a:hover {
+            background-color: #5A6E3A;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 30px 60px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h1, h2 {
+            color: #2f3e1d;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form input[type="time"],
+        form select {
+            padding: 6px 10px;
+            margin-right: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+
+        button {
+            background-color: #b1d140;
+            color: white;
+            border: none;
+            padding: 7px 14px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #99bb37;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: #D9CBB3;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td {
+            border-top: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .action-buttons button {
+            min-width: 70px;
+            padding: 7px 12px;
+            font-weight: bold;
+        }
+
+
+
+        .pagination {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #D9CBB3;
+            padding: 10px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #2f3e1d;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            background-color: #cdbb9d;
+        }
+
+        td input[type="text"] {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="{{ url_for('manage_players') }}">Manage Players</a>
+        <a href="{{ url_for('edit_tournaments') }}">Edit Tournaments</a>
+        <a href="{{ url_for('past_tournaments') }}">See Past Tournaments</a>
+        <a href="{{ url_for('manage_courts') }}">Manage Courts</a>
+    </div>
+    
+
+    <div class="container">
+        <h1>Pickleball Courts Management</h1>
+
+        <form method="GET" action="{{ url_for('search_courts') }}">
+            Search Courts: <input type="text" name="q" placeholder="Search by name/address">
+            Open Time After: <input type="time" name="open_time">
+            <button type="submit">Search</button>
+            <a href="{{ url_for('manage_courts') }}">Reset</a>
+        </form>
+
+        <h2>Add New Court</h2>
+        <form method="POST" action="{{ url_for('add_court') }}">
+            Name: <input type="text" name="name" required>
+            Address: <input type="text" name="address" required>
+            Open Time: <input type="time" name="open_time" required>
+            Latitude: <input type="text" name="latitude" required>
+            Longitude: <input type="text" name="longitude" required>
+            Number of Individual Courts: <input type="number" name="num_courts" min="1" required>
+            <button type="submit">Add Court</button>
+        </form>
+
+        <h2>Existing Courts</h2>
+        <form method="get">
+            <label>Show:
+                <select name="per_page" onchange="this.form.submit()">
+                    <option value="10" {% if per_page == 10 %}selected{% endif %}>10</option>
+                    <option value="25" {% if per_page == 25 %}selected{% endif %}>25</option>
+                    <option value="50" {% if per_page == 50 %}selected{% endif %}>50</option>
+                </select>
+            </label>
+        </form>
+
+        <div class="pagination">
+            {% if page > 1 %}
+                <a href="{{ url_for('manage_courts', page=page-1, per_page=per_page) }}">Previous</a>
+            {% endif %}
+            Page {{ page }} of {{ total_pages }}
+            {% if page < total_pages %}
+                <a href="{{ url_for('manage_courts', page=page+1, per_page=per_page) }}">Next</a>
+            {% endif %}
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th style="min-width: 280px;">Address</th>
+                    <th>Open Time</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th># of Courts</th>
+                    <th style="min-width: 140px;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for court in courts %}
+                    <tr>
+                        <form method="POST" action="{{ url_for('update_court') }}">
+                            <input type="hidden" name="c_id" value="{{ court['C_ID'] }}">
+                            <td><input type="text" name="name" value="{{ court['Name'] }}"></td>
+                            <td><input type="text" name="address" value="{{ court['Address'] }}" style="width: 100%;"></td>
+                            <td><input type="time" name="open_time" value="{{ court['Open_Time'] }}"></td>
+                            <td><input type="text" name="latitude" value="{{ court['Latitude'] }}"></td>
+                            <td><input type="text" name="longitude" value="{{ court['Longitude'] }}"></td>
+                            <td>{{ court['Num_Courts'] }}</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button type="submit">Update</button>
+                                    <form method="POST" action="{{ url_for('delete_court') }}" onsubmit="return confirm('Delete court?')" style="display:inline;">
+                                        <input type="hidden" name="c_id" value="{{ court['C_ID'] }}">
+                                        <button type="submit">Delete</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </form>
+                    </tr>
+                {% endfor %}
+                </tbody>
+                
+        </table>
+        
+
+        <a href="{{ url_for('index') }}" class="back-link">← Back to Home</a>
+    </div>
+</body>
+</html>

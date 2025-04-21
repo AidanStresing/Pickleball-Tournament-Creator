@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tournament Bracket - T_ID {{ tournament['T_ID'] }}</title>
+    <style>
+        {% set first_round_matches = bracket_size // 2 %}
+        {% set total_height = first_round_matches * 140 %}
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #F1EFE3;
+            color: #2f3e1d;
+        }
+
+        .top-nav {
+            background-color: #3D4F2D;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            font-weight: bold;
+        }
+
+        .back-link {
+            background-color: #D9CBB3;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #2f3e1d;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            background-color: #cdbb9d;
+        }
+
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .top-nav a:hover {
+            background-color: #5A6E3A;
+            border-radius: 5px;
+        }
+
+        .bracket-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .bracket-header h1 {
+            margin: 0;
+        }
+
+        .edit-games-link {
+            background-color: #B4D233;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .edit-games-link:hover {
+            background-color: #9CB626;
+        }
+
+        #bracket-container {
+            position: relative;
+            margin: 40px auto;              
+            padding: 40px;               
+            background: white;
+            border-radius: 10px;
+            overflow: auto;                 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 90vw;               
+            max-height: 80vh;              
+        }
+
+        .match-box {
+            width: 200px;
+            height: 100px;
+            word-wrap: break-word;
+            line-height: 1.2;
+            font-size: 14px;
+            margin-bottom: 30px;
+            border: 2px solid #444;
+            background: #f9f9f9;
+            padding: 8px;
+            position: absolute;
+            text-align: center;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .match-box:hover {
+            background-color: #eef6ff;
+        }
+
+        .round-label {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .tooltip {
+            position: absolute;
+            display: none;
+            background-color: #fff;
+            border: 1px solid #999;
+            padding: 10px;
+            font-size: 0.9em;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+            z-index: 999;
+            pointer-events: none;
+            max-width: 250px;
+        }
+
+        .connector-line {
+            stroke: black;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .info-box {
+            margin: 0 20px 10px;
+        }
+
+        .winner {
+            color: green;
+            font-weight: bold;
+        }
+
+        .loser {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-nav">
+    <a href="{{ url_for('manage_players') }}">Manage Players</a>
+    <a href="{{ url_for('edit_tournaments') }}">Edit Tournaments</a>
+    <a href="{{ url_for('past_tournaments') }}">See Past Tournaments</a>
+    <a href="{{ url_for('manage_courts') }}">Manage Courts</a>
+</div>
+
+<div class="bracket-header">
+    <div>
+        <h1>Tournament {{ tournament['T_ID'] }} Bracket</h1>
+        <div class="info-box">
+            <strong>Date:</strong> {{ tournament['Date'] }}<br>
+            <strong>Location:</strong> {{ tournament['Address'] }}<br>
+            <strong>Prize:</strong> ${{ tournament['Prize'] }}
+        </div>
+    </div>
+</div>
+
+<div style="overflow-x: auto; width: 100%;">
+    <div id="bracket-container">
+    {% set spacing_x = 350 %}
+    {% set box_height = 140 %}
+    {% set rounds = num_rounds %}
+
+    {% macro colorize_player(name, winner) %}
+        {% set norm = name|lower|replace(' ', '') %}
+        {% set winner_norm = winner|lower|replace(' ', '') %}
+        {% if norm == winner_norm %}
+            <span class="winner">{{ name }}</span>
+        {% elif name and winner %}
+            <span class="loser">{{ name }}</span>
+        {% else %}
+            {{ name or 'TBD' }}
+        {% endif %}
+    {% endmacro %}
+
+
+
+
+    {% for round in range(rounds) %}
+        {% set match_count = bracket_size // (2 ** (round + 1)) %}
+        {% set vertical_spacing = (2 ** round) * box_height %}
+        {% set x = spacing_x * round %}
+
+        {% for match in range(match_count) %}
+            {% set y = (vertical_spacing * match) + vertical_spacing // 2 %}
+            {% set game = bracket_by_round[round][match] if round in bracket_by_round and match < bracket_by_round[round]|length else None %}
+
+            {% if game %}
+                {% set p1 = game['player1'] %}
+                {% set p2 = game['player2'] %}
+                {% set winner = game['winner'] %}
+                {% set time = game['time'] if game['time'] else 'Not set' %}
+                {% set court = 'Court ' ~ game['court'] if game['court'] else 'TBD' %}
+                {% set g_id = game['g_id'] %}
+                {% set popup = "Game ID: " ~ g_id ~ "<br>Players: " ~ (p1 or 'TBD') ~ " vs " ~ (p2 or 'TBD') ~ "<br>Time: " ~ time ~ "<br>Court: " ~ court %}
+            {% endif %}
+
+            <div class="match-box"
+                 style="left: {{ x }}px; top: {{ y }}px;"
+                 data-tooltip="{{ popup|safe }}"
+                 data-round="{{ round }}"
+                 data-match="{{ match }}">
+                <div class="round-label">
+                    {% if round == rounds - 1 %}
+                        Final
+                    {% elif round == rounds - 2 %}
+                        Semi-Final
+                    {% elif round == rounds - 3 %}
+                        Quarter-Final
+                    {% else %}
+                        Round of {{ bracket_size // (2 ** round) }}
+                    {% endif %}
+                </div>
+                {% if game %}
+                    <div>{{ colorize_player(p1, winner) }}</div>
+                    <div>vs</div>
+                    <div>{{ colorize_player(p2, winner) }}</div>
+                {% else %}
+                    TBD<br>vs<br>TBD
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <svg id="connection-lines" 
+     style="position: absolute; top: 0; left: 0; pointer-events: none; z-index: 0;"></svg>
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 30px;">
+    <a href="{{ url_for('index') }}" class="back-link">← Back to Home</a>
+</div>
+
+
+<div class="tooltip" id="tooltip-box"></div>
+
+<script>
+    const tooltip = document.getElementById('tooltip-box');
+
+    document.querySelectorAll('.match-box').forEach(box => {
+        box.addEventListener('mouseover', (e) => {
+            tooltip.innerHTML = box.dataset.tooltip;
+            tooltip.style.display = 'block';
+        });
+
+        box.addEventListener('mousemove', (e) => {
+            tooltip.style.left = (e.pageX + 15) + 'px';
+            tooltip.style.top = (e.pageY + 15) + 'px';
+        });
+
+        box.addEventListener('mouseout', () => {
+            tooltip.style.display = 'none';
+        });
+    });
+
+    function drawLines() {
+        const svg = document.getElementById('connection-lines');
+        const container = document.getElementById('bracket-container');
+
+        // Clear old lines
+        svg.innerHTML = '';
+
+        // Dynamically size the SVG to match container
+        svg.setAttribute('width', container.scrollWidth);
+        svg.setAttribute('height', container.scrollHeight);
+
+        const boxes = document.querySelectorAll('.match-box');
+        const roundMap = {};
+
+        boxes.forEach(box => {
+            const round = parseInt(box.dataset.round);
+            const match = parseInt(box.dataset.match);
+            if (!roundMap[round]) roundMap[round] = [];
+            roundMap[round][match] = box;
+        });
+
+        Object.keys(roundMap).forEach(r => {
+            const round = parseInt(r);
+            if (!roundMap[round + 1]) return;
+
+            const nextMatches = roundMap[round + 1];
+            roundMap[round].forEach((box, i) => {
+            const nextMatch = Math.floor(i / 2);
+            const targetBox = nextMatches[nextMatch];
+            if (!targetBox) return;
+
+            const boxRect = box.getBoundingClientRect();
+            const targetRect = targetBox.getBoundingClientRect();
+            const containerRect = container.getBoundingClientRect();
+
+            const x1 = boxRect.right - containerRect.left;
+            const y1 = boxRect.top + boxRect.height / 2 - containerRect.top;
+
+            const x2 = targetRect.left - containerRect.left;
+            const y2 = targetRect.top + targetRect.height / 2 - containerRect.top;
+
+            const midX = (x1 + x2) / 2;
+
+            const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            path.setAttribute("d", `M ${x1} ${y1} H ${midX} V ${y2} H ${x2}`);
+            path.setAttribute("class", "connector-line");
+            svg.appendChild(path);
+            });
+        });
+    }
+
+
+    function setBracketHeight() {
+        const container = document.getElementById('bracket-container');
+        const boxes = container.querySelectorAll('.match-box');
+
+        let maxBottom = 0;
+        boxes.forEach(box => {
+            const rect = box.getBoundingClientRect();
+            const bottom = box.offsetTop + box.offsetHeight;
+            if (bottom > maxBottom) maxBottom = bottom;
+        });
+
+        container.style.height = (maxBottom + 50) + 'px';  
+    }
+
+
+    window.addEventListener('load', () => {
+        drawLines();
+        setBracketHeight();
+    });
+    window.addEventListener('resize', () => {
+        drawLines();
+        setBracketHeight();
+    });
+</script>
+
+</body>
+</html>

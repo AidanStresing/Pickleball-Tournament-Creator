@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Past Tournaments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F1EFE3;
+            color: #2f3e1d;
+        }
+
+        .top-nav {
+            background-color: #3D4F2D;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            font-weight: bold;
+        }
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .top-nav a:hover {
+            background-color: #5A6E3A;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        h1, h2 {
+            color: #2f3e1d;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        th {
+            background-color: #D9CBB3;
+            color: #333;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        form.inline {
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        input[type="date"],
+        input[type="number"],
+        select {
+            padding: 6px 10px;
+            margin-right: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #b1d140;
+            color: #fff;
+            border: none;
+            padding: 7px 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #99bb37;
+        }
+
+        a.reset-link, a {
+            color: #5a3d8e;
+            margin-left: 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a.reset-link:hover {
+            text-decoration: underline;
+        }
+
+        .pagination {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #D9CBB3;
+            padding: 10px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #2f3e1d;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            background-color: #cdbb9d;
+        }
+
+        .bracket-link {
+            background-color: #B4D233;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .bracket-link:hover {
+            background-color: #9CB626;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="{{ url_for('manage_players') }}">Manage Players</a>
+        <a href="{{ url_for('edit_tournaments') }}">Edit Tournaments</a>
+        <a href="{{ url_for('past_tournaments') }}">See Past Tournaments</a>
+        <a href="{{ url_for('manage_courts') }}">Manage Courts</a>
+    </div>
+
+    <div class="container">
+        <h1>Past Tournaments</h1>
+
+        <form method="GET" action="{{ url_for('past_tournaments') }}" class="inline">
+            Date:
+            <input type="date" name="date" value="{{ request.args.get('date', '') }}">
+            Prize Amount at least ($):
+            <input type="number" name="prize_min" min="0" value="{{ request.args.get('prize_min', '') }}">
+            Type:
+            <select name="type">
+                <option value="">All</option>
+                <option value="MS" {% if request.args.get('type') == 'MS' %}selected{% endif %}>MS</option>
+                <option value="MD" {% if request.args.get('type') == 'MD' %}selected{% endif %}>MD</option>
+                <option value="WS" {% if request.args.get('type') == 'WS' %}selected{% endif %}>WS</option>
+                <option value="WD" {% if request.args.get('type') == 'WD' %}selected{% endif %}>WD</option>
+                <option value="XD" {% if request.args.get('type') == 'XD' %}selected{% endif %}>XD</option>
+            </select>
+            Court ID:
+            <input type="number" name="court_id" value="{{ request.args.get('court_id', '') }}">
+            <button type="submit">Search</button>
+            <a href="{{ url_for('past_tournaments') }}" class="reset-link">Reset</a>
+        </form>
+
+        <h2>Completed Tournaments</h2>
+
+        <form method="get" class="inline">
+            <label>Show:
+                <select name="per_page" onchange="this.form.submit()">
+                    <option value="10" {% if per_page == 10 %}selected{% endif %}>10</option>
+                    <option value="25" {% if per_page == 25 %}selected{% endif %}>25</option>
+                    <option value="50" {% if per_page == 50 %}selected{% endif %}>50</option>
+                </select>
+            </label>
+        </form>
+
+        <div class="pagination">
+            {% if page > 1 %}
+                <a href="{{ url_for('past_tournaments', page=page-1, per_page=per_page, date=request.args.get('date'), prize_min=request.args.get('prize_min'), type=request.args.get('type'), court_id=request.args.get('court_id')) }}">Previous</a>
+            {% endif %}
+            Page {{ page }} of {{ total_pages }}
+            {% if page < total_pages %}
+                <a href="{{ url_for('past_tournaments', page=page+1, per_page=per_page, date=request.args.get('date'), prize_min=request.args.get('prize_min'), type=request.args.get('type'), court_id=request.args.get('court_id')) }}">Next</a>
+            {% endif %}
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Prize ($)</th>
+                    <th>Court ID</th>
+                    <th>Bracket</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tour in tournaments %}
+                <tr>
+                    <td>{{ tour['Date'] }}</td>
+                    <td>{{ tour['Type'] }}</td>
+                    <td>{{ tour['Prize'] }}</td>
+                    <td>{{ tour['C_ID'] }}</td>
+                    <td>
+                        <a class="bracket-link" href="{{ url_for('edit_bracket_done', tournament_id=tour['T_ID']) }}">View Bracket</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ url_for('index') }}" class="back-link">← Back to Home</a>
+    </div>
+</body>
+</html>

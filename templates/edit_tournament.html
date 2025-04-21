@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Tournaments</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #F1EFE3;
+            color: #333;
+        }
+
+        .top-nav {
+            background-color: #3D4F2D;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            font-weight: bold;
+        }
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .top-nav a:hover {
+            background-color: #5A6E3A;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        h1 {
+            color: #2E3B1F;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background-color: #D9CBB3;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"] {
+            padding: 6px;
+            width: 95%;
+            border-radius: 4px;
+            border: 1px solid #bbb;
+        }
+
+        button {
+            background-color: #B4D233;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 2px;
+        }
+
+        button:hover {
+            background-color: #9CB626;
+        }
+
+        a.button-link button {
+            margin: 0 2px;
+        }
+
+        a.back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 16px;
+            background-color: #D9CBB3;
+            text-decoration: none;
+            color: #3D4F2D;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        a.back-home:hover {
+            background: #cbbca6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-nav">
+        <a href="{{ url_for('manage_players') }}">Manage Players</a>
+        <a href="{{ url_for('edit_tournaments') }}">Edit Tournaments</a>
+        <a href="{{ url_for('past_tournaments') }}">See Past Tournaments</a>
+        <a href="{{ url_for('manage_courts') }}">Manage Courts</a>
+    </div>
+
+    <div class="container">
+        <h1>Edit Tournaments</h1>
+
+        <table>
+            <tr>
+                <th>T_ID</th>
+                <th>Player Count</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Prize</th>
+                <th>Location (C_ID)</th>
+                <th>Actions</th>
+            </tr>
+            {% for t in tournaments %}
+            <tr>
+                <form method="POST" action="{{ url_for('update_tournament') }}">
+                    <td>{{ t['T_ID'] }}</td>
+                    <td>{{ player_counts.get(t['T_ID'], 0) }}</td>
+                    <td><input type="date" name="date" value="{{ t['Date'] }}" required></td>
+                    <td>{{ t['Type'] }}</td>
+                    <td><input type="number" name="prize" value="{{ t['Prize'] }}" required></td>
+                    <td><input type="text" name="location" value="{{ t['C_ID'] }}" required></td>
+                    <td>
+                        <div style="display: flex; gap: 6px; justify-content: center;">
+                            <form method="POST" action="{{ url_for('update_tournament') }}" style="display:inline;">
+                                <input type="hidden" name="t_id" value="{{ t['T_ID'] }}">
+                                <input type="hidden" name="date" value="{{ t['Date'] }}">
+                                <input type="hidden" name="prize" value="{{ t['Prize'] }}">
+                                <input type="hidden" name="location" value="{{ t['C_ID'] }}">
+                                <button type="submit">Save</button>
+                            </form>
+                    
+                            <form method="GET" action="{{ url_for('edit_bracket', tournament_id=t['T_ID']) }}" style="display:inline;">
+                                <button type="submit">Edit Bracket</button>
+                            </form>
+                    
+                            <form method="POST" action="{{ url_for('delete_tournament') }}" style="display:inline;">
+                                <input type="hidden" name="t_id" value="{{ t['T_ID'] }}">
+                                <button type="submit" onclick="return confirm('Are you sure you want to delete this tournament?')">Delete</button>
+                            </form>
+                        </div>
+                    </td>
+                    
+            </tr>
+            {% endfor %}
+        </table>
+
+        <a class="back-home" href="{{ url_for('index') }}">← Back to Home</a>
+    </div>
+
+</body>
+</html>

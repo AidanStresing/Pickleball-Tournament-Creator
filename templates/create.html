@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Tournament</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F1EFE3;
+      color: #333;
+    }
+
+    .top-nav {
+      background-color: #3D4F2D;
+      display: flex;
+      justify-content: space-around;
+      padding: 15px 0;
+      font-weight: bold;
+    }
+
+    .top-nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+    }
+
+    .top-nav a:hover {
+      background-color: #5A6E3A;
+      border-radius: 5px;
+    }
+
+    .container {
+      padding: 40px;
+    }
+
+    h1 {
+      color: #2E3B1F;
+    }
+
+    input[type="text"], input[type="number"], select, input[type="date"] {
+      padding: 10px;
+      width: 300px;
+      margin: 5px 0 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .player {
+      margin-bottom: 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .player.invalid input,
+    .player.invalid select {
+      border-color: red;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.9em;
+    }
+
+    button, input[type="submit"] {
+      background-color: #B4D233;
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover,
+    input[type="submit"]:hover {
+      background-color: #9CB626;
+    }
+
+    .remove-btn {
+      background-color: #c4452d;
+      padding: 6px 12px;
+    }
+
+    .remove-btn:hover {
+      background-color: #a7331f;
+    }
+
+    #players {
+      margin-top: 20px;
+    }
+
+    a.back-home {
+      display: inline-block;
+      margin: 20px;
+      text-decoration: none;
+      color: #3D4F2D;
+      background: #D9CBB3;
+      padding: 8px 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    a.back-home:hover {
+      background: #cbbca6;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-nav">
+    <a href="{{ url_for('manage_players') }}">Manage Players</a>
+    <a href="{{ url_for('edit_tournaments') }}">Edit Tournaments</a>
+    <a href="{{ url_for('past_tournaments') }}">See Past Tournaments</a>
+    <a href="{{ url_for('manage_courts') }}">Manage Courts</a>
+  </div>
+
+  <div class="container">
+    <a href="{{ url_for('index') }}" class="back-home">&larr; Back to Home</a>
+
+    <h1>Create a Pickleball Tournament</h1>
+
+    <form method="POST" action="{{ url_for('create_tournament') }}" autocomplete="off" id="tournament-form">
+
+      <label>Date:</label><br>
+      <input type="date" name="date" required><br><br>
+
+      <label>Type:</label><br>
+      <select name="type" required>
+        <option value="MS">Men's Singles</option>
+        <option value="MD">Men's Doubles</option>
+        <option value="MIS">Mixed Singles</option>
+        <option value="MID">Mixed Doubles</option>
+        <option value="WS">Women's Singles</option>
+        <option value="WD">Women's Doubles</option>
+      </select><br><br>
+
+      <label>Prize Amount ($):</label><br>
+      <input type="number" name="prize" required><br><br>
+
+      <label>Select Court Location:</label><br>
+      <button type="button" onclick="findNearbyParks()">Find Parks Near Me</button><br><br>
+
+      <select name="location" id="park-select" required>
+        <option value="">Click the button above to find nearby parks</option>
+      </select><br><br>
+
+      <h3>Players:</h3>
+      <div id="players">
+        <div class="player">
+          <input type="text" name="player_name[]" placeholder="Name" required onblur="validatePlayer(this)">
+          <input type="number" name="player_age[]" placeholder="Age" required>
+          <select name="player_gender[]" required>
+            <option value="">Gender</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="O">Other</option>
+            <option value="N">Prefer not to say</option>
+          </select>
+          <button type="button" class="remove-btn" onclick="removePlayer(this)">Remove</button>
+          <span class="error-message"></span>
+        </div>
+      </div>
+
+      <button type="button" onclick="addPlayer()">Add Another Player</button><br><br>
+
+      <input type="submit" value="Create Tournament">
+    </form>
+  </div>
+
+  <script>
+    // Fetch nearby parks based on user's location
+    function findNearbyParks() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          fetch('/get_nearby_parks', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            })
+          })
+          .then(response => response.json())
+          .then(data => {
+            const select = document.getElementById('park-select');
+            select.innerHTML = '';
+            data.parks.forEach(park => {
+              const option = document.createElement('option');
+              option.value = park.C_ID;
+              option.textContent = `${park.Name} - ${park.Address} (Open: ${park.Open_Time}, Courts: ${park.Num}, ${park.Distance.toFixed(2)} miles away)`;
+              select.appendChild(option);
+            });
+          })
+          .catch(() => alert("Failed to fetch nearby parks."));
+        }, () => alert('Geolocation failed or permission denied.'));
+      } else {
+        alert("Geolocation not supported.");
+      }
+    }
+  
+    // Setup autocomplete and validation logic for a player entry
+    function setupAutocomplete(playerDiv) {
+      const nameInput = playerDiv.querySelector('input[name="player_name[]"]');
+      const ageInput = playerDiv.querySelector('input[name="player_age[]"]');
+      const genderSelect = playerDiv.querySelector('select[name="player_gender[]"]');
+      const errorSpan = playerDiv.querySelector('.error-message');
+  
+      const datalistId = 'autocomplete_' + Math.random().toString(36).substr(2, 5);
+      nameInput.setAttribute('list', datalistId);
+  
+      const datalist = document.createElement('datalist');
+      datalist.id = datalistId;
+      document.body.appendChild(datalist);
+  
+      nameInput.addEventListener('input', () => {
+        const val = nameInput.value.trim();
+        if (val.length < 2) return;
+  
+        fetch(`/autocomplete_player?term=${encodeURIComponent(val)}`)
+          .then(res => res.json())
+          .then(data => {
+            datalist.innerHTML = '';
+            data.players.forEach(player => {
+              const option = document.createElement('option');
+              option.value = player.name;
+              option.dataset.age = player.age;
+              option.dataset.gender = player.gender;
+              datalist.appendChild(option);
+            });
+          });
+  
+        // Validate on input
+        validatePlayerBlock(playerDiv);
+      });
+  
+      nameInput.addEventListener('change', () => {
+        const selected = [...datalist.options].find(opt => opt.value === nameInput.value);
+        if (selected) {
+          ageInput.value = selected.dataset.age;
+          genderSelect.value = selected.dataset.gender;
+        }
+  
+        validatePlayerBlock(playerDiv);
+      });
+  
+      ageInput.addEventListener('input', () => validatePlayerBlock(playerDiv));
+      genderSelect.addEventListener('change', () => validatePlayerBlock(playerDiv));
+    }
+  
+    // Validate a single player block
+    async function validatePlayerBlock(playerDiv) {
+      const name = playerDiv.querySelector('input[name="player_name[]"]').value.trim().toLowerCase();
+      const age = playerDiv.querySelector('input[name="player_age[]"]').value.trim();
+      const gender = playerDiv.querySelector('select[name="player_gender[]"]').value;
+      const errorSpan = playerDiv.querySelector('.error-message');
+  
+      if (!name || !age || !gender) {
+        errorSpan.textContent = '';
+        playerDiv.classList.remove('invalid');
+        return true;
+      }
+  
+      // Check for duplicate in current list
+      const allPlayers = document.querySelectorAll('.player');
+      let duplicateFound = false;
+      allPlayers.forEach(div => {
+        if (div !== playerDiv) {
+          const otherName = div.querySelector('input[name="player_name[]"]').value.trim().toLowerCase();
+          const otherAge = div.querySelector('input[name="player_age[]"]').value.trim();
+          const otherGender = div.querySelector('select[name="player_gender[]"]').value;
+          if (name === otherName && age === otherAge && gender === otherGender) {
+            duplicateFound = true;
+          }
+        }
+      });
+  
+      if (duplicateFound) {
+        errorSpan.textContent = 'This player is already in the list.';
+        playerDiv.classList.add('invalid');
+        return false;
+      }
+  
+      // Check for active tournament via server
+      try {
+        const res = await fetch('/check_player', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, age, gender })
+        });
+        const data = await res.json();
+  
+        if (data.in_active_tournament) {
+          errorSpan.textContent = 'Player already in active tournament.';
+          playerDiv.classList.add('invalid');
+          return false;
+        } else {
+          errorSpan.textContent = '';
+          playerDiv.classList.remove('invalid');
+          return true;
+        }
+      } catch (err) {
+        errorSpan.textContent = 'Error checking player.';
+        playerDiv.classList.add('invalid');
+        return false;
+      }
+    }
+  
+    // Add new player input block
+    function addPlayer() {
+      const div = document.createElement('div');
+      div.classList.add('player');
+      div.innerHTML = `
+        <input type="text" name="player_name[]" placeholder="Name" required>
+        <input type="number" name="player_age[]" placeholder="Age" required>
+        <select name="player_gender[]" required>
+          <option value="">Gender</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="O">Other</option>
+          <option value="N">Prefer not to say</option>
+        </select>
+        <button type="button" class="remove-btn" onclick="removePlayer(this)">Remove</button>
+        <span class="error-message"></span>
+      `;
+      document.getElementById('players').appendChild(div);
+      setupAutocomplete(div);
+    }
+  
+    function removePlayer(btn) {
+      const playerDiv = btn.closest('.player');
+      playerDiv.remove();
+    }
+  
+    // Validate all player entries before allowing form submission
+    async function validateAllPlayersBeforeSubmit() {
+      const playerDivs = document.querySelectorAll('.player');
+      const results = await Promise.all(Array.from(playerDivs).map(validatePlayerBlock));
+      return results.every(r => r === true);
+    }
+  
+    // Attach form submit handler
+    document.getElementById('tournament-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const valid = await validateAllPlayersBeforeSubmit();
+      if (valid) {
+        this.submit();
+      } else {
+        alert("Fix invalid players before submitting.");
+      }
+    });
+  
+    // Setup initial players on load
+    document.querySelectorAll('.player').forEach(setupAutocomplete);
+  </script>
+  
+</body>
+</html>

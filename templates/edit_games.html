@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Games for Tournament {{ tournament_id }}</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #F1EFE3;
+            margin: 0;
+            padding: 0;
+            color: #2f3e1d;
+        }
+
+        .top-nav {
+            background-color: #3D4F2D;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            font-weight: bold;
+        }
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .top-nav a:hover {
+            background-color: #5A6E3A;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        h1 {
+            color: #2E3B1F;
+            margin-bottom: 10px;
+        }
+
+        .info {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background-color: #D9CBB3;
+        }
+
+        select, input[type="time"] {
+            width: 150px;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #bbb;
+            margin: 3px 0;
+        }
+
+        button {
+            background-color: #B4D233;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #9CB626;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 25px;
+            text-decoration: none;
+            color: #3D4F2D;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: #5A6E3A;
+        }
+
+        select option:disabled {
+            color: #bbb;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-nav">
+    <a href="{{ url_for('manage_players') }}">Manage Players</a>
+    <a href="{{ url_for('edit_tournaments') }}">Edit Tournaments</a>
+    <a href="{{ url_for('past_tournaments') }}">See Past Tournaments</a>
+    <a href="{{ url_for('manage_courts') }}">Manage Courts</a>
+</div>
+
+<div class="container">
+    <h1>Edit Games for Tournament {{ tournament_id }}</h1>
+
+    <div class="info">
+        <strong>Date:</strong> {{ tournament_date }}<br>
+        <strong>Location:</strong> {{ tournament_address }}<br>
+        <strong>Prize:</strong> ${{ tournament_prize }}
+    </div>
+
+    <form method="POST" action="{{ url_for('update_game') }}">
+        <input type="hidden" name="tournament_id" value="{{ tournament_id }}">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Round</th>
+                    <th>Players</th>
+                    <th>Time</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% set used_names = [] %}
+            {% for game in games %}
+                <tr>
+                    <td>{{ game['Round'] }}</td>
+                    <td>
+                        {% set g_id = game['G_ID'] %}
+                        {% set names = game_players.get(g_id, []) %}
+                        {% if game['Round'] == 1 %}
+                            {% for i in range(4 if is_doubles else 2) %}
+                                <select name="player_{{ g_id }}_{{ i }}">
+                                    <option value="">-- Select --</option>
+                                    {% for player in all_players %}
+                                        {% set pname = player['Name'] %}
+                                        {% if pname not in used_names or pname in names %}
+                                            <option value="{{ pname }}" {% if i < names|length and names[i] == pname %}selected{% endif %}>{{ pname }}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                    <option value="BYE" {% if i < names|length and names[i] == 'BYE' %}selected{% endif %}>BYE</option>
+                                </select>
+                                {% if is_doubles and i == 1 or not is_doubles and i == 0 %}
+                                    &nbsp;&nbsp;vs&nbsp;&nbsp;
+                                {% endif %}
+                            {% endfor %}
+                            {% for name in names %}
+                                {% if name != 'BYE' %}
+                                    {% set _ = used_names.append(name) %}
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            {% if names|length == 4 %}
+                                {{ names[0] }} & {{ names[1] }} vs {{ names[2] }} & {{ names[3] }}
+                            {% elif names|length == 2 %}
+                                {{ names[0] }} vs {{ names[1] }}
+                            {% elif names|length == 1 %}
+                                {{ names[0] }} vs BYE
+                            {% else %}
+                                TBD vs TBD
+                            {% endif %}
+                        {% endif %}
+                    </td>
+                    <td><input type="time" name="time_{{ g_id }}" value="{{ game['Time'] or '' }}"></td>
+                    <td>
+                        <select name="result_{{ g_id }}">
+                            <option value="">Select winner</option>
+                            {% for option in result_options[g_id] %}
+                                {% if option != 'TBD' %}
+                                    <option value="{{ option }}">{{ option }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <button type="submit">Save All Changes</button>
+    </form>
+
+    <a class="back-link" href="{{ url_for('edit_bracket', tournament_id=tournament_id) }}">&larr; Back to Bracket</a>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const allSelectors = document.querySelectorAll('select[name^="player_"]');
+
+        function updateOptions() {
+            const selected = {};
+
+            allSelectors.forEach(sel => {
+                if (sel.value && sel.value !== "BYE") {
+                    selected[sel.value] = (selected[sel.value] || 0) + 1;
+                }
+            });
+
+            allSelectors.forEach(sel => {
+                const currentValue = sel.value;
+                const options = Array.from(sel.options);
+
+                options.forEach(opt => {
+                    if (!opt.value || opt.value === "BYE") return;
+
+                    const isSelectedElsewhere = selected[opt.value] && opt.value !== currentValue;
+                    opt.disabled = isSelectedElsewhere;
+                });
+            });
+        }
+
+        allSelectors.forEach(sel => {
+            sel.addEventListener('change', updateOptions);
+        });
+
+        updateOptions(); 
+    });
+</script>
+{% if finish_prompt %}
+<div id="finishModal" class="modal">
+    <div class="modal-content">
+        <h2>Is this tournament finished?</h2>
+        <form method="POST" action="{{ url_for('finalize_tournament') }}">
+            <input type="hidden" name="t_id" value="{{ tournament_id }}">
+            <button type="submit" name="confirm" value="yes">Yes, finish it</button>
+            <button type="submit" name="confirm" value="no">No, keep it open</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('load', function() {
+        const modal = document.getElementById("finishModal");
+        if (modal) {
+            modal.style.display = "block";
+        }
+    });
+
+    function closeModal() {
+        const modal = document.getElementById("finishModal");
+        if (modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+<style>
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 320px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.modal-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button[name="confirm"][value="yes"] {
+    background-color: #B4D233;
+    color: white;
+}
+
+.modal-content button[name="confirm"][value="yes"]:hover {
+    background-color: #9CB626;
+}
+
+.modal-content button[name="confirm"][value="no"] {
+    background-color: #D9CBB3;
+    color: #2f3e1d;
+}
+
+.modal-content button[name="confirm"][value="no"]:hover {
+    background-color: #cdbb9d;
+}
+</style>
+{% endif %}
+
+
+</body>
+</html>

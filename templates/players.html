@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Players</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F1EFE3;
+            color: #2f3e1d;
+        }
+
+        .top-nav {
+            background-color: #3D4F2D;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            font-weight: bold;
+        }
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .top-nav a:hover {
+            background-color: #5A6E3A;
+            border-radius: 5px;
+        }
+
+
+        .container {
+        padding: 30px 60px;
+        width: 100%;
+        box-sizing: border-box;
+        }
+
+
+        h1, h2 {
+            color: #2f3e1d;
+        }
+
+        form {
+            margin: 10px 0;
+        }
+
+        form input[type="text"],
+        form input[type="number"],
+        form input[type="date"],
+        form select {
+            padding: 6px 10px;
+            margin: 5px 5px 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+
+        form button {
+            background-color: #b1d140;
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #99bb37;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        th {
+            background-color: #D9CBB3;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td {
+            border-top: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .pagination {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #D9CBB3;
+            padding: 10px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #2f3e1d;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            background-color: #cdbb9d;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .action-buttons form {
+            margin: 0;
+}  
+
+        .action-buttons button {
+            background-color: #b1d140;
+            color: #fff;
+            border: none;
+            padding: 7px 14px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .action-buttons button:hover {
+            background-color: #99bb37;
+        }   
+
+        button, .delete-btn {
+            background-color: #b1d140;
+            color: #fff;
+            border: none;
+            padding: 7px 14px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover, .delete-btn:hover {
+            background-color: #99bb37;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="{{ url_for('manage_players') }}">Manage Players</a>
+        <a href="{{ url_for('edit_tournaments') }}">Edit Tournaments</a>
+        <a href="{{ url_for('past_tournaments') }}">See Past Tournaments</a>
+        <a href="{{ url_for('manage_courts') }}">Manage Courts</a>
+    </div>
+    
+
+    <div class="container">
+        <h1>Player Database</h1>
+
+        <h2>Search Players</h2>
+        <form method="GET" action="{{ url_for('search_players') }}" class="inline">
+            Name: <input type="text" name="name" value="{{ request.args.get('name', '') }}">
+            Gender:
+            <select name="gender">
+                <option value="">Any</option>
+                <option value="Male" {% if request.args.get('gender') == 'Male' %}selected{% endif %}>Male</option>
+                <option value="Female" {% if request.args.get('gender') == 'Female' %}selected{% endif %}>Female</option>
+            </select>
+            Age: <input type="text" name="age" value="{{ request.args.get('age', '') }}">
+            Tournament ID: <input type="number" name="tid" min="1" value="{{ request.args.get('tid', '') }}">
+            <button type="submit">Search</button>
+            <a href="{{ url_for('manage_players') }}" class="reset-link">Reset</a>
+        </form>        
+
+        <h2>Players List</h2>
+        <form method="get">
+            <label>Show:
+                <select name="per_page" onchange="this.form.submit()">
+                    <option value="10" {% if per_page == 10 %}selected{% endif %}>10</option>
+                    <option value="25" {% if per_page == 25 %}selected{% endif %}>25</option>
+                    <option value="50" {% if per_page == 50 %}selected{% endif %}>50</option>
+                </select>
+            </label>
+        </form>
+
+        <div class="pagination">
+            {% if page > 1 %}
+                <a href="{{ url_for('manage_players', page=page-1, per_page=per_page) }}">Previous</a>
+            {% endif %}
+            Page {{ page }} of {{ total_pages }}
+            {% if page < total_pages %}
+                <a href="{{ url_for('manage_players', page=page+1, per_page=per_page) }}">Next</a>
+            {% endif %}
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>P_ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Tournament ID</th>
+                    <th colspan="2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for player in players %}
+                <tr>
+                    <form method="POST" action="{{ url_for('edit_player') }}">
+                      <td>{{ player['P_ID'] }}</td>
+                      <td><input type="text" name="name" value="{{ player['Name'] }}" required></td>
+                      <td><input type="number" name="age" value="{{ player['Age'] }}" required></td>
+                      <td>
+                          <select name="gender" required>
+                              <option value="M" {% if player['Gender'] == 'M' %}selected{% endif %}>Male</option>
+                              <option value="F" {% if player['Gender'] == 'F' %}selected{% endif %}>Female</option>
+                              <option value="O" {% if player['Gender'] == 'O' %}selected{% endif %}>Other</option>
+                              <option value="N" {% if player['Gender'] == 'N' %}selected{% endif %}>Prefer not to say</option>
+                          </select>
+                      </td>
+                      <td>{{ player['T_ID'] }}</td>
+                      <td colspan="2">
+                          <div class="action-buttons">
+                              <input type="hidden" name="p_id" value="{{ player['P_ID'] }}">
+                              <button type="submit">Save</button>
+                          </form>
+                          <form method="POST" action="{{ url_for('delete_player') }}" onsubmit="return confirm('Delete player?')">
+                              <input type="hidden" name="p_id" value="{{ player['P_ID'] }}">
+                              <button type="submit" class="delete-btn">Delete</button>
+                          </form>
+                          </div>
+                      </td>
+                  </tr>
+                  
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Add New Player</h2>
+        <form method="POST" action="{{ url_for('add_player') }}" id="add-player-form" autocomplete="off">
+            <div id="new-player" class="player">
+                <input type="text" name="name" placeholder="Name" required onblur="validateNewPlayer()">
+                <input type="number" name="age" placeholder="Age" required onblur="validateNewPlayer()">
+                <select name="gender" required onchange="validateNewPlayer()">
+                    <option value="">Gender</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                    <option value="O">Other</option>
+                    <option value="N">Prefer not to say</option>
+                </select>
+                <span class="error-message"></span>
+            </div>
+            <button type="submit">Add Player</button>
+        </form>
+
+        <a href="{{ url_for('index') }}" class="back-link">← Back to Home</a>
+    </div>
+
+    <script>
+        function validateNewPlayer() {
+            const playerDiv = document.getElementById('new-player');
+            const name = playerDiv.querySelector('input[name="name"]').value.trim();
+            const age = playerDiv.querySelector('input[name="age"]').value.trim();
+            const gender = playerDiv.querySelector('select[name="gender"]').value;
+            const errorSpan = playerDiv.querySelector('.error-message');
+
+            if (!name || !age || !gender) {
+                errorSpan.textContent = '';
+                return;
+            }
+
+            fetch('/check_duplicate_player', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, age, gender })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.exists) {
+                    errorSpan.textContent = 'This player already exists.';
+                } else {
+                    errorSpan.textContent = '';
+                }
+            });
+        }
+
+        document.getElementById('add-player-form').addEventListener('submit', function(e) {
+            const errorText = document.querySelector('#new-player .error-message').textContent;
+            if (errorText) {
+                e.preventDefault();
+                alert('Fix duplicate player error before submitting.');
+            }
+        });
+    </script>
+</body>
+</html>

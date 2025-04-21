@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pickleball Tournament Creator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #556B2F;
+      color: #fff;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #3E5521;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .top-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 12px 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .top-nav a:hover {
+      background-color: #6B8E23;
+      color: #000;
+      border-radius: 5px;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero-section h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    .create-button {
+      padding: 20px 40px;
+      font-size: 1.5em;
+      background-color: #A2C523;
+      border: none;
+      color: #fff;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .create-button:hover {
+      background-color: #8CBF1F;
+    }
+
+    .tournaments {
+      background-color: #D9CBB3;
+      padding: 40px 60px;
+      margin-top: 50px;
+      border-top: 3px solid #F1EFE3;
+    }
+
+    .tournaments h2 {
+      color: #fff;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .tournament-card {
+      background-color: #779933;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      color: #fff;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .tournament-card a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .tournament-card a:hover {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-nav">
+    <a href="{{ url_for('manage_players') }}">Manage Players</a>
+    <a href="{{ url_for('edit_tournaments') }}">Edit Tournaments</a>
+    <a href="{{ url_for('past_tournaments') }}">See Past Tournaments</a>
+    <a href="{{ url_for('manage_courts') }}">Manage Courts</a>
+  </div>
+
+  <div class="hero-section">
+    <h1>Welcome to the Pickleball Tournament Creator</h1>
+    <a href="{{ url_for('create_tournament') }}">
+      <button class="create-button">Create a New Tournament</button>
+    </a>
+  </div>
+
+  <div class="tournaments">
+    <h2>Current Tournaments</h2>
+    {% for t in tournaments %}
+      <div class="tournament-card">
+        <strong>Tournament {{ t['T_ID'] }}</strong><br>
+        Date: {{ t['Date'] }}<br>
+        Type: {{ t['Type'] }}<br>
+        Prize: ${{ t['Prize'] }}<br>
+        <a href="{{ url_for('edit_bracket', tournament_id=t['T_ID']) }}">View Bracket</a>
+      </div>
+    {% else %}
+      <p>No active tournaments right now.</p>
+    {% endfor %}
+  </div>
+
+</body>
+</html>
